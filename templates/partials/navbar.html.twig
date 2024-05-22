@@ -1,11 +1,130 @@
 <nav class="p-3 m-3 rounded">
 	<div class="">
-		<div class="d-flex align-items-end">
+		<div class="d-flex align-items-center justify-content-between dropdown">
 			<a href="{{ path('app_home') }}" class=""><img class="rounded" width="120" height="120" src="images/iessalduba.jpg" alt="I.E.S. Salduba"/></a>
-			<ul class="list-group list-group-horizontal list-unstyled">
-				<li><a href="{{ path('app_students') }}" class="m-2 text-decoration-none text-light">Alumnos</a></li>
-				<li><a {# href="{{ path('app_students') }}" #} class="m-2 text-decoration-none text-light">Profesores</a></li>
-			</ul>
+			<div>
+				<h1 class="title text-light text-center m-3">I.E.S. Salduba</h1>
+				<div class="d-flex">
+					<div>
+						<button class="p-2 ms-3 border-0 rounded dropdown-toggle dropdownButton fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Centro
+						</button>
+						<ul class="dropdown-menu dropdown-container mt-2">
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="{# m-2 text-decoration-none text-light #}dropdown-item">Organigrama</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="{# m-2 text-decoration-none text-light #}dropdown-item">Localización</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="{# m-2 text-decoration-none text-light #}dropdown-item">Oferta educativa</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="{# m-2 text-decoration-none text-light #}dropdown-item">Plan de Centro</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="{# m-2 text-decoration-none text-light #}dropdown-item">Planes y Programas Educativos</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="{# m-2 text-decoration-none text-light #}dropdown-item">Secretaría Virtual</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<button class="p-2 ms-3 border-0 rounded dropdown-toggle dropdownButton fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Secretaría
+						</button>
+						<ul class="dropdown-menu dropdown-container mt-2">
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="{# m-2 text-decoration-none text-light #}dropdown-item">Información para 2º Bachillerato</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="{# m-2 text-decoration-none text-light #}dropdown-item">Información para FP</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="{# m-2 text-decoration-none text-light #}dropdown-item">Información sobre escolarización</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="{# m-2 text-decoration-none text-light #}dropdown-item">Documentos</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<button class="p-2 ms-3 border-0 rounded dropdown-toggle dropdownButton fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Biblioteca
+						</button>
+						<ul class="dropdown-menu dropdown-container mt-2">
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="{# m-2 text-decoration-none text-light #}dropdown-item">Funcionamiento</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="{# m-2 text-decoration-none text-light #}dropdown-item">BiblioWeb</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="{# m-2 text-decoration-none text-light #}dropdown-item">Enlaces a blogs de biblioteca</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<button class="p-2 ms-3 border-0 rounded dropdown-toggle dropdownButton fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							DACE
+						</button>
+						<ul class="dropdown-menu dropdown-container mt-2">
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="{# m-2 text-decoration-none text-light #}dropdown-item">Información del DACE</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="{# m-2 text-decoration-none text-light #}dropdown-item">Actividades previstas</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<button class="p-2 ms-3 border-0 rounded dropdown-toggle dropdownButton fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Alumnos
+						</button>
+						<ul class="dropdown-menu dropdown-container mt-2">
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="{# m-2 text-decoration-none text-light #}dropdown-item">Asesoría académica</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="{# m-2 text-decoration-none text-light #}dropdown-item">Información para 2º Bachillerato</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="{# m-2 text-decoration-none text-light #}dropdown-item">Información para FP</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="{# m-2 text-decoration-none text-light #}dropdown-item">Información para alumnos con materias pendientes</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<button class="p-2 ms-3 border-0 rounded dropdown-toggle dropdownButton fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							AMPA
+						</button>
+						<ul class="dropdown-menu dropdown-container mt-2">
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="{# m-2 text-decoration-none text-light #}dropdown-item">Información AMPA</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="{# m-2 text-decoration-none text-light #}dropdown-item">Contacto</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="text-light text-end">
+				29011540 - I.E.S. - Salduba
+				<br>
+				Finca "El Arquillo" s/n. 29670.
+				<br>
+				Tels.: 952.78.71.40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;951.270.705&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fax:  951.27.07.08
+				<br>
+				<a class="text-decoration-none text-light fw-bold mail" href="mailto:direccion@iessalduba.com">direccion@iessalduba.com</a>
+				<br>
+				<a class="text-decoration-none text-light fw-bold mail" href="mailto:jefatura@iessalduba.com">jefatura@iessalduba.com</a>
+				<br>
+				<a class="text-decoration-none text-light fw-bold mail" href="mailto:secretaria@iessalduba.com">secretaria@iessalduba.com</a>
+			</div>
 		</div>
 	</div>
 </nav>
