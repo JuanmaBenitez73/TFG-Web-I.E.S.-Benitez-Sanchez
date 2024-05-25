@@ -2,33 +2,30 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>
 			{% block title %}Welcome!
 			{% endblock %}
 		</title>
 		<link rel="icon" href="images/iessalduba.jpg">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-		{% block stylesheets %}
-			{{ encore_entry_link_tags('app') }}
-		{% endblock %}
-
-		{# {% block stylesSpecified %}{% endblock %} #}
-
-		{% block javascripts %}
-			{{ encore_entry_script_tags('app') }}
-		{% endblock %}
-	</head>
-	<body>
-		{% block navbar %}
-			{% include 'partials/navbar.html.twig' %}
-		{% endblock %}
-		{% block body %}{% endblock %}
-		{% block footer %}
-			{% include 'partials/footer.html.twig' %}
-		{% endblock %}
-
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 		 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
 		 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
-	</body>
-</html>
+
+			{% block stylesheets %}
+		{{ encore_entry_link_tags('app') }}
+		{% endblock %}
+
+			{% block javascripts %}
+		{{ encore_entry_script_tags('app') }}
+	{% endblock %}
+	</head>
+		<body>
+			{% block navbar %}
+		{% include 'partials/navbar.html.twig' %}
+		{% endblock %}{% block body %}
+		{% endblock %}
+			{% block footer %}
+		{% include 'partials/footer.html.twig' %}
+	{% endblock %}
+</body></html>

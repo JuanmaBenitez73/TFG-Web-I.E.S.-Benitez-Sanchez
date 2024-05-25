@@ -4,6 +4,11 @@ body {
 
 nav {
     background-color: rgb(28, 63, 96);
+    position: relative;
+}
+
+#main-img {
+    box-shadow: 0 0 10px 0px rgb(255, 255, 255);
 }
 
 footer {
@@ -13,6 +18,10 @@ footer {
 
 .title {
     font-family: 'title', sans-serif;
+}
+
+.title:hover {
+    text-shadow: 0px 0px 15px rgb(0, 0, 0);
 }
 
 .dropdownButton,
@@ -30,13 +39,61 @@ footer {
 
 .dropdown-container a:hover {
     background-color: rgb(179, 205, 211) !important;
+    color: rgb(28, 63, 96);
+    text-shadow: 0px 0px 25px rgb(28, 63, 96);
 }
 
 .mail:hover {
     text-decoration: underline !important;
 }
 
+.max-content-width {
+    width: max-content;
+}
+
+.fs-xs {
+    font-size: small;
+}
+
+.button-collapse {
+    background-color: rgb(103, 134, 153) !important;
+}
+
+.dropdown-menu[data-bs-popper] {
+    left: auto !important;
+    position: absolute;
+}
+
+.more-gap {
+    gap: 7rem;
+}
+
+#toggle-button {
+    box-shadow: 0 0 8px 0px rgb(193, 234, 242);
+}
+
 @font-face {
     font-family: 'title';
     src: url('../fonts/title.ttf');
+}
+
+@media (max-width: 60rem) {
+    .more-gap {
+        gap: 10rem;
+    }
+
+    /* .menu-appear div {
+        margin: .5rem;
+    } */
+}
+
+@media (max-width: 40rem) {
+    .resposive-column {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .fs-xs {
+        font-size: x-small;
+    }
 }
