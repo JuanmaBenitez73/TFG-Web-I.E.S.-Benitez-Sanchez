@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Organigrama
+{% endblock %}
+
+{% block body %}
+	<main class="p-3 m-3 rounded overflow-hidden">
+		<div id="organization-chart-container" class="p-1 rounded">
+			<h1 class="text-center">Organigrama</h1>
+			<h2 class="text-center title-org">I.E.S. Salduba</h2>
+			<div id="organization-chart-content" class="d-grid gap-1">
+				<div class="bg-danger rounded p-2 text-shadow">
+					<h4 id="affiliates" class="text-center">Empresas asociadas</h4>
+					{% for affiliate in affiliates %}
+						<div class="bg-white">
+							<p class="p-2">
+								{{ affiliate.name }}<br>
+								{{ affiliate.description }}
+							</p>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="bg-warning rounded p-2 text-shadow">
+					<h4 id="departments" class="text-center">Departamentos</h4>
+					{% for department in departments %}
+						<div class="bg-white">
+							<p class="p-2">
+								{{ department.name }}<br>
+								{{ department.description }}
+							</p>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="bg-success rounded p-2 text-shadow">
+					<h4 id="staff" class="text-center">Personal</h4>
+					{% for item in staff %}
+						<div class="bg-white">
+							<p class="p-2">
+								{{ item.name }}<br>
+								{{ item.description }}<br>
+								{{ item.employe }}<br>
+								{{ item.dni }}<br>
+								{{ item.job }}
+							</p>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="bg-primary rounded p-2 text-shadow">
+					<h4 id="contact-information" class="text-center">Información de contacto</h4>
+					{% for item in contactInformation %}
+						<div class="bg-white">
+							<p class="p-2">
+								{{ item.name }}<br>
+								{{ item.value }}
+							</p>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}

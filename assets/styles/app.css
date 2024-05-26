@@ -16,7 +16,7 @@ footer {
     color: white;
 }
 
-.title {
+.title, .title-org {
     font-family: 'title', sans-serif;
 }
 
@@ -113,6 +113,37 @@ footer {
 
 #center-container {
     gap: 3rem;
+}
+
+#affiliates {
+    grid-area: affiliates;
+}
+
+#departments {
+    grid-area: departments;
+}
+
+#staff {
+    grid-area: staff;
+}
+
+#contact-information {
+    grid-area: contact-information;
+}
+
+#organization-chart-container {
+    background-color: rgb(218, 239, 247);
+}
+
+#organization-chart-content {
+    grid-column: auto auto auto auto;
+    grid-template-areas: 
+        "affiliates departments staff contact-information"
+    ;
+}
+
+.text-shadow {
+    text-shadow: 0px 0px 3px rgb(255, 255, 255);
 }
 
 @font-face {
