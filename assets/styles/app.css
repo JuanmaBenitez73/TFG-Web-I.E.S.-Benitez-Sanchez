@@ -111,15 +111,19 @@ footer {
     ;
 }
 
+#center-container {
+    gap: 3rem;
+}
+
 @font-face {
     font-family: 'title';
     src: url('../fonts/title.ttf');
 }
 
 @media (max-width: 60rem) {
-    /* .more-gap {
-        gap: 10rem;
-    } */
+    #collapse-container {
+        gap: 1rem;
+    }
 
     .collapse-content {
         grid-template-rows: auto auto;
@@ -130,9 +134,13 @@ footer {
         gap: 1rem;
     }
 
-    /* #center-container {
-        width: 25rem;
-    } */
+    #center-container {
+        gap: 0;
+    }
+
+    .more-gap {
+        gap: 5rem;
+    }
 }
 
 @media (max-width: 40rem) {
@@ -168,5 +176,9 @@ footer {
             "navbarCollapse6"
         ;
         gap: 1rem;
+    }
+
+    #center-container {
+        gap: 0;
     }
 }
