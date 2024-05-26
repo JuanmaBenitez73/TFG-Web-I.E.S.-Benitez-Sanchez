@@ -2,9 +2,9 @@ body {
     background-color: rgb(179, 205, 211) !important;
 }
 
-nav {
+nav,
+main {
     background-color: rgb(28, 63, 96);
-    position: relative;
 }
 
 #main-img {
@@ -72,18 +72,30 @@ footer {
     box-shadow: 0 0 8px 0px rgb(193, 234, 242);
 }
 
+#info {
+    gap: 1rem;
+}
+
 @font-face {
     font-family: 'title';
     src: url('../fonts/title.ttf');
 }
 
 @media (max-width: 60rem) {
-    .more-gap {
+    /* .more-gap {
         gap: 10rem;
+    } */
+
+    .collapse-content {
+        display: grid;
+    }
+    
+    #center-container {
+        width: 25rem;
     }
 
-    /* .menu-appear div {
-        margin: .5rem;
+    /* .collapse-container {
+
     } */
 }
 
@@ -95,5 +107,18 @@ footer {
 
     .fs-xs {
         font-size: x-small;
+    }
+
+    #info {
+        gap: 7rem;
+    }
+
+    #info-text {
+        line-height: 1rem;
+    }
+
+    .collapse-content {
+        display: flex;
+        flex-direction: column;
     }
 }
