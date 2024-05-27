@@ -16,11 +16,11 @@ footer {
     color: white;
 }
 
-.title, .title-org {
+.title {
     font-family: 'title', sans-serif;
 }
 
-.title:hover {
+.nav-title:hover {
     text-shadow: 0px 0px 15px rgb(0, 0, 0);
 }
 
@@ -115,35 +115,43 @@ footer {
     gap: 3rem;
 }
 
-#affiliates {
-    grid-area: affiliates;
-}
-
-#departments {
-    grid-area: departments;
-}
-
-#staff {
-    grid-area: staff;
-}
-
-#contact-information {
-    grid-area: contact-information;
-}
-
-#organization-chart-container {
+#index-container,
+#organization-chart-container,
+#location-container,
+#educative-offer-container {
     background-color: rgb(218, 239, 247);
 }
 
 #organization-chart-content {
     grid-column: auto auto auto auto;
-    grid-template-areas: 
+    grid-template-areas:
         "affiliates departments staff contact-information"
     ;
 }
 
 .text-shadow {
     text-shadow: 0px 0px 3px rgb(255, 255, 255);
+}
+
+.organization-chart-affiliates {
+    background-color: rgb(255, 222, 231);
+}
+
+.organization-chart-departments {
+    background-color: rgb(255, 246, 222);
+}
+
+.organization-chart-staff {
+    background-color: rgb(223, 255, 231);
+}
+
+.organization-chart-contact-information {
+    background-color: rgb(222, 229, 255);
+}
+
+#location-content, #educative-offer-content {
+    background-color: rgb(28, 63, 96);
+    width: max-content;
 }
 
 @font-face {
@@ -211,5 +219,31 @@ footer {
 
     #center-container {
         gap: 0;
+    }
+
+    #affiliates {
+        grid-area: affiliates;
+    }
+
+    #departments {
+        grid-area: departments;
+    }
+
+    #staff {
+        grid-area: staff;
+    }
+
+    #contact-information {
+        grid-area: contact-information;
+    }
+
+    #organization-chart-content {
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "affiliates"
+            "departments"
+            "staff"
+            "contact-information"
+        ;
     }
 }

@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Oferta Educativa
+{% endblock %}
+
+{% block body %}
+	<main class="p-3 m-3 rounded overflow-hidden">
+		<div id="educative-offer-container" class="p-1 rounded">
+			<h1 class="text-center">Oferta Educativa</h1>
+			<h2 class="text-center title">I.E.S. Salduba</h2>
+			<div class="d-flex flex-column align-items-center">
+				<p class="p-3">
+					La oferta completa del Sistema Educativo en el plan LOMCE es el siguiente 
+					(recordar que en nuestro centro ofertamos ESO, Bachillerato, FP Grado medio y FP Grado superior):
+				</p>
+				<div id="educative-offer-content" class="p-2 rounded">
+					<img src="images/educative_offer.jpg"/>
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}
