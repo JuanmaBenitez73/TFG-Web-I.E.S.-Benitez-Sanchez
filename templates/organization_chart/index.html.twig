@@ -4,13 +4,16 @@
 {% endblock %}
 
 {% block body %}
-	<main class="p-3 m-3 rounded overflow-hidden">
-		<div id="organization-chart-container" class="p-1 rounded">
-			<h1 class="text-center">Organigrama</h1>
-			<h2 class="text-center title">I.E.S. Salduba</h2>
-			<div id="organization-chart-content" class="d-grid gap-1">
-				<div class="bg-danger rounded p-2 text-shadow">
-					<h4 id="affiliates" class="text-center">Empresas asociadas</h4>
+	<main class="p-3 mt-3 mb-3 rounded overflow-hidden">
+		<div id="organization-chart-container" class="p-2 rounded">
+			<div>
+				<h1 class="text-center title">I.E.S. Salduba</h1>
+				<h2 class="text-center">Organigrama</h2>
+			</div>
+			<br>
+			<div id="organization-chart-content" class="d-grid gap-2">
+				<div class="bg-danger rounded p-2">
+					<h4 id="affiliates" class="text-center text-light text-shadow">Empresas asociadas</h4>
 					<div class="rounded p-2 organization-chart-affiliates">
 						{% for affiliate in affiliates %}
 							<div>
@@ -21,8 +24,8 @@
 						{% endfor %}
 					</div>
 				</div>
-				<div class="bg-warning rounded p-2 text-shadow">
-					<h4 id="departments" class="text-center">Departamentos</h4>
+				<div class="bg-warning rounded p-2">
+					<h4 id="departments" class="text-center text-light text-shadow">Departamentos</h4>
 					<div class="rounded p-2 organization-chart-departments">
 						{% for department in departments %}
 							<div>
@@ -33,8 +36,8 @@
 						{% endfor %}
 					</div>
 				</div>
-				<div class="bg-success rounded p-2 text-shadow">
-					<h4 id="staff" class="text-center">Personal</h4>
+				<div class="bg-success rounded p-2">
+					<h4 id="staff" class="text-center text-light text-shadow">Personal</h4>
 					<div class="rounded p-2 organization-chart-staff">
 						{% for item in staff %}
 							<div>
@@ -48,8 +51,8 @@
 						{% endfor %}
 					</div>
 				</div>
-				<div class="bg-primary rounded p-2 text-shadow">
-					<h4 id="contact-information" class="text-center">Información de contacto</h4>
+				<div class="bg-primary rounded p-2">
+					<h4 id="contact-information" class="text-center text-light text-shadow">Información de contacto</h4>
 					<div class="rounded p-2 organization-chart-contact-information">
 						{% for item in contactInformation %}
 							<div>

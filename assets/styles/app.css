@@ -1,19 +1,29 @@
+:root {
+    --bg-light-blue: rgb(179, 205, 211);
+    --bg-dark-blue: rgb(28, 63, 96);
+    --white: rgb(255, 255, 255);
+    --black: rgb(0, 0, 0);
+}
+
 body {
-    background-color: rgb(179, 205, 211) !important;
+    background-color: var(--bg-light-blue) !important;
 }
 
 nav,
 main {
-    background-color: rgb(28, 63, 96);
+    background-color: var(--bg-dark-blue);
 }
 
-#main-img {
-    box-shadow: 0 0 10px 0px rgb(255, 255, 255);
+#nav-img {
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 10px 0px var(--white);
 }
 
 footer {
-    background-color: rgb(28, 63, 96);
+    background-color: var(--bg-dark-blue);
     color: white;
+    /* position: sticky; */
 }
 
 .title {
@@ -21,42 +31,38 @@ footer {
 }
 
 .nav-title:hover {
-    text-shadow: 0px 0px 15px rgb(0, 0, 0);
+    text-shadow: 0px 0px 15px var(--black);
 }
 
 .dropdownButton,
 .dropdown-container {
     background-color: rgb(103, 134, 153) !important;
-    color: rgb(255, 255, 255);
+    color: var(--white);
     box-shadow: 0 0 8px 0px rgb(193, 234, 242);
 }
 
 .dropdown-container a {
     background-color: rgb(103, 134, 153) !important;
-    color: rgb(255, 255, 255);
+    color: var(--white);
     font-weight: bold;
 }
 
 .dropdown-container a:hover {
-    background-color: rgb(179, 205, 211) !important;
-    color: rgb(28, 63, 96);
-    text-shadow: 0px 0px 25px rgb(28, 63, 96);
+    background-color: var(--bg-light-blue) !important;
+    color: var(--bg-dark-blue);
+    text-shadow: 0px 0px 25px var(--bg-dark-blue);
+}
+
+#emails {
+    justify-content: center;
 }
 
 .mail:hover {
     text-decoration: underline !important;
 }
 
-.max-content-width {
-    width: max-content;
-}
-
 .fs-xs {
     font-size: small;
-}
-
-.button-collapse {
-    background-color: rgb(103, 134, 153) !important;
 }
 
 .dropdown-menu[data-bs-popper] {
@@ -64,8 +70,9 @@ footer {
     position: absolute;
 }
 
-.more-gap {
-    gap: 7rem;
+main {
+    margin-left: 12.5% !important;
+    margin-right: 12.5% !important;
 }
 
 #toggle-button {
@@ -73,52 +80,50 @@ footer {
 }
 
 .dropdown-toggle.show {
-    color: black;
+    color: var(--black);
 }
 
 #info {
     gap: 1rem;
 }
 
-.navbarCollapse1 {
-    grid-area: navbarCollapse1;
+.navbar-item-1 {
+    grid-area: navbarItem1;
 }
 
-.navbarCollapse2 {
-    grid-area: navbarCollapse2;
+.navbar-item-2 {
+    grid-area: navbarItem2;
 }
 
-.navbarCollapse3 {
-    grid-area: navbarCollapse3;
+.navbar-item-3 {
+    grid-area: navbarItem3;
 }
 
-.navbarCollapse4 {
-    grid-area: navbarCollapse4;
+.navbar-item-4 {
+    grid-area: navbarItem4;
 }
 
-.navbarCollapse5 {
-    grid-area: navbarCollapse5;
+.navbar-item-5 {
+    grid-area: navbarItem5;
 }
 
-.navbarCollapse6 {
-    grid-area: navbarCollapse6;
+.navbar-item-6 {
+    grid-area: navbarItem6;
 }
 
-.collapse-content {
+.menu-content {
+    justify-items: center;
     grid-template-rows: auto;
     grid-template-areas:
-        "navbarCollapse1 navbarCollapse2 navbarCollapse3 navbarCollapse4 navbarCollapse5 navbarCollapse6"
+        "navbarItem1 navbarItem2 navbarItem3 navbarItem4 navbarItem5 navbarItem6"
     ;
-}
-
-#center-container {
-    gap: 3rem;
 }
 
 #index-container,
 #organization-chart-container,
 #location-container,
-#educative-offer-container {
+#educative-offer-container,
+#contact-container {
     background-color: rgb(218, 239, 247);
 }
 
@@ -130,7 +135,7 @@ footer {
 }
 
 .text-shadow {
-    text-shadow: 0px 0px 3px rgb(255, 255, 255);
+    text-shadow: 0px 0px 3px var(--black);
 }
 
 .organization-chart-affiliates {
@@ -149,8 +154,9 @@ footer {
     background-color: rgb(222, 229, 255);
 }
 
-#location-content, #educative-offer-content {
-    background-color: rgb(28, 63, 96);
+#location-content,
+#educative-offer-content {
+    background-color: var(--bg-dark-blue);
     width: max-content;
 }
 
@@ -165,15 +171,15 @@ footer {
 }
 
 @media (max-width: 60rem) {
-    #collapse-container {
+    #menu-container {
         gap: 1rem;
     }
 
-    .collapse-content {
+    .menu-content {
         grid-template-rows: auto auto;
         grid-template-areas:
-            "navbarCollapse1 navbarCollapse2 navbarCollapse3"
-            "navbarCollapse4 navbarCollapse5 navbarCollapse6"
+            "navbarItem1 navbarItem2 navbarItem3"
+            "navbarItem4 navbarItem5 navbarItem6"
         ;
         gap: 1rem;
     }
@@ -182,8 +188,8 @@ footer {
         gap: 0;
     }
 
-    .more-gap {
-        gap: 5rem;
+    main {
+        margin: 1rem !important;
     }
 }
 
@@ -205,19 +211,25 @@ footer {
         line-height: 1rem;
     }
 
-    #collapse-container {
+    #menu-container {
         gap: 1rem;
     }
 
-    .collapse-content {
-        grid-template-rows: auto auto auto auto auto auto;
+    .menu-content {
+        justify-items: start;
+    }
+
+    .nav-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .menu-content {
+        grid-template-rows: auto auto;
         grid-template-areas:
-            "navbarCollapse1"
-            "navbarCollapse2"
-            "navbarCollapse3"
-            "navbarCollapse4"
-            "navbarCollapse5"
-            "navbarCollapse6"
+            "navbarItem1 navbarItem2"
+            "navbarItem3 navbarItem4"
+            "navbarItem5 navbarItem6"
         ;
         gap: 1rem;
     }
@@ -260,5 +272,13 @@ footer {
     #educative-offer-image {
         width: 300px;
         height: 368px;
+    }
+
+    main {
+        margin: 1rem !important;
+    }
+
+    #emails {
+        flex-direction: column;
     }
 }

@@ -1,140 +1,126 @@
 <nav class="p-3 m-3 rounded">
-	<div class="d-flex align-items-center justify-content-between dropdown">
-		<div class="d-flex align-items-center more-gap resposive-column">
-			<a href="{{ path('app_home') }}" class="ms-2"><img id="main-img" class="rounded" width="150" height="150" src="images/iessalduba.jpg" alt="I.E.S. Salduba"/></a>
-			<div id="center-container" class="d-flex flex-column align-items-center">
-				<div class="max-content-width">
-					<a href="{{ path('app_home') }}" class="text-decoration-none">
-						<h1 class="title nav-title text-light text-center mb-4">I.E.S. Salduba</h1>
-					</a>
-				</div>
-				<div id="collapse-container" class="navbar navbar-expand-lg justify-content-center">
-					<button id="toggle-button" class="navbar-toggler button-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon span"></span>
-					</button>
-					<div class="d-grid collapse-content">
-						<div class="collapse navbar-collapse navbarCollapse1" id="navbarCollapse">
-							<button class="p-2 ms-3 border-0 rounded dropdown-toggle dropdownButton fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-								Centro
-							</button>
-							<ul class="dropdown-menu dropdown-container mt-2">
-								<li>
-									<a href="{{ path('app_organization_chart') }}" class="dropdown-item">Organigrama</a>
-								</li>
-								<li>
-									<a href="{{ path('app_location') }}" class="dropdown-item">Localización</a>
-								</li>
-								<li>
-									<a href="{{ path('app_educative_offer') }}" class="dropdown-item">Oferta educativa</a>
-								</li>
-								<li>
-									<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Plan de Centro</a>
-								</li>
-								<li>
-									<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Planes y Programas Educativos</a>
-								</li>
-								<li>
-									<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Secretaría Virtual</a>
-								</li>
-							</ul>
-						</div>
-						<div class="collapse navbar-collapse navbarCollapse2" id="navbarCollapse">
-							<button class="p-2 ms-3 border-0 rounded dropdown-toggle dropdownButton fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-								Secretaría
-							</button>
-							<ul class="dropdown-menu dropdown-container mt-2">
-								<li>
-									<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Información para 2º Bachillerato</a>
-								</li>
-								<li>
-									<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Información para FP</a>
-								</li>
-								<li>
-									<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Información sobre escolarización</a>
-								</li>
-								<li>
-									<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Documentos</a>
-								</li>
-							</ul>
-						</div>
-						<div class="collapse navbar-collapse navbarCollapse3" id="navbarCollapse">
-							<button class="p-2 ms-3 border-0 rounded dropdown-toggle dropdownButton fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-								Biblioteca
-							</button>
-							<ul class="dropdown-menu dropdown-container mt-2">
-								<li>
-									<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Funcionamiento</a>
-								</li>
-								<li>
-									<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">BiblioWeb</a>
-								</li>
-								<li>
-									<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Enlaces a blogs de biblioteca</a>
-								</li>
-							</ul>
-						</div>
-						<div class="collapse navbar-collapse navbarCollapse4" id="navbarCollapse">
-							<button class="p-2 ms-3 border-0 rounded dropdown-toggle dropdownButton fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-								DACE
-							</button>
-							<ul class="dropdown-menu dropdown-container mt-2">
-								<li>
-									<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Información del DACE</a>
-								</li>
-								<li>
-									<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Actividades previstas</a>
-								</li>
-							</ul>
-						</div>
-						<div class="collapse navbar-collapse navbarCollapse5" id="navbarCollapse">
-							<button class="p-2 ms-3 border-0 rounded dropdown-toggle dropdownButton fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-								Alumnos
-							</button>
-							<ul class="dropdown-menu dropdown-container mt-2">
-								<li>
-									<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Asesoría académica</a>
-								</li>
-								<li>
-									<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Información para 2º Bachillerato</a>
-								</li>
-								<li>
-									<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Información para FP</a>
-								</li>
-								<li>
-									<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Información para alumnos con materias pendientes</a>
-								</li>
-							</ul>
-						</div>
-						<div class="collapse navbar-collapse navbarCollapse6" id="navbarCollapse">
-							<button class="p-2 ms-3 border-0 rounded dropdown-toggle dropdownButton fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-								AMPA
-							</button>
-							<ul class="dropdown-menu dropdown-container mt-2">
-								<li>
-									<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Información AMPA</a>
-								</li>
-								<li>
-									<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Contacto</a>
-								</li>
-							</ul>
-						</div>
+	<div class="d-flex align-items-center justify-content-between nav-content">
+		<a href="{{ path('app_home') }}" class="ms-2"><img id="nav-img" class="rounded" src="images/iessalduba.jpg" alt="I.E.S. Salduba"/></a>
+		<div class="d-flex flex-column align-items-center">
+			<div>
+				<a href="{{ path('app_home') }}" class="text-decoration-none">
+					<h1 class="title nav-title text-light text-center">I.E.S. Salduba</h1>
+				</a>
+			</div>
+			<div id="menu-container" class="navbar navbar-expand-lg justify-content-center">
+				<div class="d-grid menu-content">
+					<div class="navbar-item-1">
+						<button class="p-2 ms-3 border-0 rounded dropdown-toggle dropdownButton fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Centro
+						</button>
+						<ul class="dropdown-menu dropdown-container mt-2">
+							<li>
+								<a href="{{ path('app_organization_chart') }}" class="dropdown-item">Organigrama</a>
+							</li>
+							<li>
+								<a href="{{ path('app_location') }}" class="dropdown-item">Localización</a>
+							</li>
+							<li>
+								<a href="{{ path('app_educative_offer') }}" class="dropdown-item">Oferta educativa</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Plan de Centro</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Planes y Programas Educativos</a>
+							</li>
+							<li>
+								<a href="https://www.juntadeandalucia.es/educacion/secretariavirtual/" target="_blank" class="dropdown-item">Secretaría Virtual</a>
+							</li>
+							<li>
+								<a href="{{ path('app_contact') }}" class="dropdown-item">Contacto</a>
+							</li>
+						</ul>
+					</div>
+					<div class="navbar-item-2">
+						<button class="p-2 ms-3 border-0 rounded dropdown-toggle dropdownButton fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Secretaría
+						</button>
+						<ul class="dropdown-menu dropdown-container mt-2">
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Información para 2º Bachillerato</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Información para FP</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Información sobre escolarización</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Documentos</a>
+							</li>
+						</ul>
+					</div>
+					<div class="navbar-item-3">
+						<button class="p-2 ms-3 border-0 rounded dropdown-toggle dropdownButton fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Biblioteca
+						</button>
+						<ul class="dropdown-menu dropdown-container mt-2">
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Funcionamiento</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">BiblioWeb</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Enlaces a blogs de biblioteca</a>
+							</li>
+						</ul>
+					</div>
+					<div class="navbar-item-4">
+						<button class="p-2 ms-3 border-0 rounded dropdown-toggle dropdownButton fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							DACE
+						</button>
+						<ul class="dropdown-menu dropdown-container mt-2">
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Información del DACE</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Actividades previstas</a>
+							</li>
+						</ul>
+					</div>
+					<div class="navbar-item-5">
+						<button class="p-2 ms-3 border-0 rounded dropdown-toggle dropdownButton fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Alumnos
+						</button>
+						<ul class="dropdown-menu dropdown-container mt-2">
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Asesoría académica</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Información para 2º Bachillerato</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Información para FP</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Información para alumnos con materias pendientes</a>
+							</li>
+						</ul>
+					</div>
+					<div class="navbar-item-6">
+						<button class="p-2 ms-3 border-0 rounded dropdown-toggle dropdownButton fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							AMPA
+						</button>
+						<ul class="dropdown-menu dropdown-container mt-2">
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Información AMPA</a>
+							</li>
+							<li>
+								<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Contacto</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div id="info" class="fs-xs text-light text-end d-flex flex-column">
-			<div id="info-text" class="d-flex flex-column gap-2">
-				29011540 - I.E.S. - Salduba
-				<br>
-				Finca "El Arquillo" s/n. 29670.
-				<br>
-				Tels.: 952.78.71.40<br>951.270.705<br>Fax:  951.27.07.08
-				<div class="d-flex flex-column">
-					<a class="text-decoration-none text-light fw-bold mail" href="mailto:direccion@iessalduba.com">direccion@iessalduba.com</a>
-					<a class="text-decoration-none text-light fw-bold mail" href="mailto:jefatura@iessalduba.com">jefatura@iessalduba.com</a>
-					<a class="text-decoration-none text-light fw-bold mail" href="mailto:secretaria@iessalduba.com">secretaria@iessalduba.com</a>
-				</div>
-			</div>
 			<button class="btn btn-dark border-light mt-1">
 				<i class="fa-solid fa-right-from-bracket"></i>
 				<a href="{# intranet #}" class="text-decoration-none text-light">Acceso a la intranet</a>
