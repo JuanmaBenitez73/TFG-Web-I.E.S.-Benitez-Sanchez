@@ -155,14 +155,23 @@ main {
 }
 
 #location-content,
-#educative-offer-content {
+#educative-offer-content{
     background-color: var(--bg-dark-blue);
     width: max-content;
+}
+
+.carousel-content {
+    width: 700px;
+    height: 525px;
 }
 
 #location-maps {
     width: 750px;
     height: 450px;
+}
+
+.text-justify {
+    text-align: justify;
 }
 
 @font-face {
@@ -190,6 +199,11 @@ main {
 
     main {
         margin: 1rem !important;
+    }
+
+    .carousel-content {
+        width: 500px;
+        height: 375px;
     }
 }
 
@@ -280,5 +294,10 @@ main {
 
     #emails {
         flex-direction: column;
+    }
+
+    .carousel-content {
+        width: 300px;
+        height: 225px;
     }
 }
