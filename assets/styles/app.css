@@ -6,7 +6,17 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: var(--bg-light-blue) !important;
+    margin: 0;
+}
+
+footer {
+    background-color: var(--bg-dark-blue);
+    color: white;
+    margin-top: auto;
 }
 
 nav,
@@ -18,12 +28,6 @@ main {
     width: 100px;
     height: 100px;
     box-shadow: 0 0 10px 0px var(--white);
-}
-
-footer {
-    background-color: var(--bg-dark-blue);
-    color: white;
-    /* position: sticky; */
 }
 
 .title {
@@ -57,7 +61,8 @@ footer {
     justify-content: center;
 }
 
-.mail:hover {
+.mail:hover,
+.link:hover {
     text-decoration: underline !important;
 }
 
@@ -123,7 +128,8 @@ main {
 #organization-chart-container,
 #location-container,
 #educative-offer-container,
-#contact-container {
+#contact-container,
+#school-plan-container {
     background-color: rgb(218, 239, 247);
 }
 
@@ -154,7 +160,7 @@ main {
     background-color: rgb(222, 229, 255);
 }
 
-#educative-offer-content{
+#educative-offer-content {
     background-color: var(--bg-dark-blue);
     width: max-content;
 }
@@ -176,6 +182,10 @@ main {
 
 .text-justify {
     text-align: justify;
+}
+
+.school-plan-links {
+    width: 700px;
 }
 
 @font-face {
@@ -298,10 +308,25 @@ main {
 
     #emails {
         flex-direction: column;
+        gap: .5rem;
+    }
+
+    .carousel-home-content {
+        width: 300px;
+        height: 140.625px;
     }
 
     .carousel-content {
         width: 300px;
         height: 225px;
+    }
+
+    #school-plan-image {
+        width: 300px;
+        height: 223px;
+    }
+
+    .school-plan-links {
+        font-size: x-small;
     }
 }
