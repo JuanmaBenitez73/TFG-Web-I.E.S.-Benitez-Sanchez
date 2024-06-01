@@ -71,8 +71,8 @@ footer {
 }
 
 main {
-    margin-left: 12.5% !important;
-    margin-right: 12.5% !important;
+    margin-left: 10% !important;
+    margin-right: 10% !important;
 }
 
 #toggle-button {
@@ -154,20 +154,24 @@ main {
     background-color: rgb(222, 229, 255);
 }
 
-#location-content,
 #educative-offer-content{
     background-color: var(--bg-dark-blue);
     width: max-content;
 }
 
-.carousel-content {
+.carousel-home-content {
+    width: 700px;
+    height: 328.125px;
+}
+
+.carousel-location-content {
     width: 700px;
     height: 525px;
 }
 
 #location-maps {
-    width: 750px;
-    height: 450px;
+    width: 700px;
+    height: 400px;
 }
 
 .text-justify {
