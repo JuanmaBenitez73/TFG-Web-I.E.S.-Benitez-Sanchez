@@ -1,0 +1,105 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Planes y Programas Educativos
+{% endblock %}
+
+{% block body %}
+	<main class="p-3 mt-3 mb-3 rounded overflow-hidden">
+		<div id="second-bach-info-container" class="p-2 rounded">
+			<div>
+				<h1 class="text-center title">I.E.S. Salduba - Planes y Programas Educativos</h1>
+			</div>
+			<div class="d-flex flex-column align-items-center">
+				<div>
+					<img id="plans_programs_img" src="{{ asset('images/plans_programs/plans_programs.png') }}" alt="Planes y Programas Educativos"/>
+				</div>
+				<p class="mt-3 fw-bold">Durante el curso escolar 2023-2024 nuestro centro participa en los siguientes planes y programas educativos:</p>
+				<div id="table-container" class="table-plans">
+					<table class="table table-striped table-success table-hover table-bordered">
+						<thead>
+							<tr>
+								<th>Planes / Proyectos Educativos</th>
+								<th>Coordinador</th>
+								<th>Enlace</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Transformación Digital Educativa</td>
+								<td>Luis Alejandro Martínez</td>
+								<td>
+									<div class="d-flex justify-content-center">
+										<a href="https://www.juntadeandalucia.es/educacion/portals/web/transformacion-digital-educativa/inicio" target="_blank"><img class="table-img" src="{{ asset('images/plans_programs/1.png') }}" alt="Transformación Digital Educativa"/></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>Plan de Salud Laboral y P.R.L.</td>
+								<td>David Ramírez</td>
+								<td>
+									<div class="d-flex justify-content-center">
+										<a href="https://www.juntadeandalucia.es/educacion/portals/web/ced/riesgos-laborales" target="_blank"><img class="table-img" src="{{ asset('images/plans_programs/2.png') }}" alt="Transformación Digital Educativa"/></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>Plan de igualdad de género en educación </td>
+								<td>Laura Jiménez</td>
+								<td>
+									<div class="d-flex justify-content-center">
+										<a href="https://www.juntadeandalucia.es/educacion/portals/web/igualdad" target="_blank"><img class="table-img" src="{{ asset('images/plans_programs/3.png') }}" alt="Transformación Digital Educativa"/></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>PROA</td>
+								<td>Sergio Rojas</td>
+								<td>
+									<div class="d-flex justify-content-center">
+										<a href="https://www.juntadeandalucia.es/educacion/portals/web/ced/planesyprogramas/planes-educativos/proa-2023-2024" target="_blank"><img class="table-img" src="{{ asset('images/plans_programs/4.png') }}" alt="Transformación Digital Educativa"/></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>Organización y Funcionamiento de las Bibliotecas Escolares</td>
+								<td>Pedro Godrid</td>
+								<td>
+									<div class="d-flex justify-content-center">
+										<a href="https://www.juntadeandalucia.es/educacion/portals/web/lecturas-bibliotecas-escolares/red-andaluza-de-bibliotecas-escolares" target="_blank"><img class="table-img" src="{{ asset('images/plans_programs/5.png') }}" alt="Transformación Digital Educativa"/></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>BiblioWeb - <a class="fw-bold text-dark" href="https://iessaldubabiblioteca.blogspot.com/" target="_blank">Blog</a></td>
+								<td>Andrea Villarrubia</td>
+								<td>
+									<div class="d-flex justify-content-center">
+										<a href="https://www.juntadeandalucia.es/educacion/senecav2/seneca/biblioweb/portal/29011540" target="_blank"><img class="table-img" src="{{ asset('images/plans_programs/6.png') }}" alt="Transformación Digital Educativa"/></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>Programa CIMA</td>
+								<td>M.ª Dolores Moreno</td>
+								<td>
+									<div class="d-flex justify-content-center">
+										<a href="https://www.juntadeandalucia.es/educacion/portals/web/ced/planesyprogramas/programas-innovacion-educativa" target="_blank"><img class="table-img" src="{{ asset('images/plans_programs/7.png') }}" alt="Transformación Digital Educativa"/></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>Programa Más Equidad</td>
+								<td>Marta Toro</td>
+								<td>
+									<div class="d-flex justify-content-center">
+										<a href="https://www.juntadeandalucia.es/educacion/portals/delegate/content/59d20c8f-fdb9-42cc-ae1d-075d5532bb2d/Resoluci%C3%B3n%20Convocatoria%20M%C3%A1s%20Equidad%2023_24(F)%20(1)" target="_blank"><img class="table-img" src="{{ asset('images/plans_programs/8.png') }}" alt="Transformación Digital Educativa"/></a>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}

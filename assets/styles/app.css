@@ -212,6 +212,11 @@ td {
     border-top: 2px solid var(--bg-dark-blue);
 }
 
+.footer-hr {
+    width: 100%;
+    border-top: 3px solid var(--white);
+}
+
 #boja-img {
     width: 700px;
     height: 292px;
@@ -228,6 +233,48 @@ td {
 
 .list-style {
     list-style: square;
+}
+
+#secretaria-virtual-img {
+    width: 250px;
+    height: 65px;
+}
+
+#matriculacion-iande-img {
+    width: 200px;
+    height: 92px;
+}
+
+#ipasen-img {
+    width: 100px;
+    height: 100px;
+}
+
+#moodle-img {
+    width: 200px;
+    height: 104px;
+}
+
+#educative-offer-list li {
+    margin-top: .5rem;
+}
+
+#educative-offer-list a {
+    color: var(--black) !important;
+}
+
+#educative-offer-list a:hover {
+    color: red !important;
+}
+
+.table-img {
+    width: 75px;
+    height: 75px;
+}
+
+#plans_programs_img {
+    width: 400px;
+    height: 308px;
 }
 
 @font-face {
@@ -262,8 +309,28 @@ td {
         height: 375px;
     }
 
-    table {
+    .table-bach {
         font-size: .7rem;
+    }
+
+    #secretaria-virtual-img {
+        width: 167px;
+        height: 41px;
+    }
+    
+    #matriculacion-iande-img {
+        width: 134px;
+        height: 62px;
+    }
+    
+    #ipasen-img {
+        width: 66px;
+        height: 66px;
+    }
+    
+    #moodle-img {
+        width: 134px;
+        height: 70px;
     }
 }
 
@@ -380,8 +447,12 @@ td {
         overflow-x: auto;
     }
 
-    table {
+    .table-bach {
         font-size: .3rem;
+    }
+
+    .table-plans {
+        font-size: .7rem;
     }
 
     #boja-img {
@@ -402,5 +473,20 @@ td {
     #instructions_img {
         width: 250px;
         height: 228px;
+    }
+
+    #footer-brands {
+        flex-direction: column !important;
+        gap: 1rem;
+    }
+
+    .table-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #plans_programs_img {
+        width: 200px;
+        height: 159px;
     }
 }
