@@ -129,7 +129,9 @@ main {
 #location-container,
 #educative-offer-container,
 #contact-container,
-#school-plan-container {
+#school-plan-container,
+#educative-proyect-container,
+#second-bach-info-container {
     background-color: rgb(218, 239, 247);
 }
 
@@ -188,6 +190,46 @@ main {
     width: 700px;
 }
 
+.second-bach-info-content {
+    box-shadow: 0 0 10px 0px var(--bg-dark-blue) inset;
+    padding: 1rem;
+    width: 100%;
+}
+
+.second-bach-info-content-title {
+    background: linear-gradient(to right, var(--bg-dark-blue), var(--bg-light-blue));
+    box-shadow: 7px -7px 0 0px rgb(0, 180, 0);
+}
+
+th,
+td {
+    vertical-align: middle;
+    width: max-content;
+}
+
+.second-bach-info-hr {
+    width: 100%;
+    border-top: 2px solid var(--bg-dark-blue);
+}
+
+#boja-img {
+    width: 700px;
+    height: 292px;
+}
+
+#conv-img {
+    width: 700px;
+    height: 608px;
+}
+
+.text-purple {
+    color: blueviolet;
+}
+
+.list-style {
+    list-style: square;
+}
+
 @font-face {
     font-family: 'title';
     src: url('../fonts/title.ttf');
@@ -218,6 +260,10 @@ main {
     .carousel-content {
         width: 500px;
         height: 375px;
+    }
+
+    table {
+        font-size: .7rem;
     }
 }
 
@@ -328,5 +374,33 @@ main {
 
     .school-plan-links {
         font-size: x-small;
+    }
+
+    #table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        font-size: .3rem;
+    }
+
+    #boja-img {
+        width: 300px;
+        height: 125px;
+    }
+
+    #conv-img {
+        width: 300px;
+        height: 260px;
+    }
+
+    #awards-img {
+        width: 250px;
+        height: 58px;
+    }
+
+    #instructions_img {
+        width: 250px;
+        height: 228px;
     }
 }

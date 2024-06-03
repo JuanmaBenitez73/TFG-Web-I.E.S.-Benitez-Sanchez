@@ -1,6 +1,6 @@
 <nav class="p-3 m-3 rounded">
 	<div class="d-flex align-items-center justify-content-between nav-content">
-		<a href="{{ path('app_home') }}" class="ms-2"><img id="nav-img" class="rounded" src="images/iessalduba.jpg" alt="I.E.S. Salduba"/></a>
+		<a href="{{ path('app_home') }}" class="ms-2"><img id="nav-img" class="rounded" src="{{ asset('images/iessalduba.jpg') }}" alt="I.E.S. Salduba"/></a>
 		<div class="d-flex flex-column align-items-center">
 			<div>
 				<a href="{{ path('app_home') }}" class="text-decoration-none">
@@ -43,7 +43,7 @@
 						</button>
 						<ul class="dropdown-menu dropdown-container mt-2">
 							<li>
-								<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Información para 2º Bachillerato</a>
+								<a href="{{ path('app_second_bach_info') }}" class="dropdown-item">Información para 2º Bachillerato</a>
 							</li>
 							<li>
 								<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Información para FP</a>
@@ -94,7 +94,7 @@
 								<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Asesoría académica</a>
 							</li>
 							<li>
-								<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Información para 2º Bachillerato</a>
+								<a href="{{ path('app_second_bach_info') }}" class="dropdown-item">Información para 2º Bachillerato</a>
 							</li>
 							<li>
 								<a href="{# {{ path('app_organigrama') }} #}" class="dropdown-item">Información para FP</a>

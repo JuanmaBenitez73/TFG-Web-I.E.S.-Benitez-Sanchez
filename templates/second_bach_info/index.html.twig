@@ -1,0 +1,164 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Información 2º Bachillerato
+{% endblock %}
+
+{% block body %}
+	<main class="p-3 mt-3 mb-3 rounded overflow-hidden">
+		<div id="second-bach-info-container" class="p-2 rounded">
+			<div>
+				<h1 class="text-center title">I.E.S. Salduba - Información 2º Bachillerato</h1>
+			</div>
+			<div class="d-flex flex-column align-items-center {# gap-2 #}">
+				<div class="second-bach-info-content rounded">
+					<div class="p-2 second-bach-info-content-title rounded">
+						<p class="fw-bold text-light">CONVOCATORIA EXTRAORDINARIA DE EXÁMENES DE 2º DE BACHILLERATO. CURSO 22/23.</p>
+					</div>
+					<p class="mt-3 fw-bold">EN ESTA OCASIÓN SE REALIZARÁN LOS EXÁMENES CON LOS TRAMOS HORARIOS NATURALES, ES DECIR, SIN USAR LOS RECREOS.</p>
+					<div id="table-container">
+						<table class="table table-striped table-light table-hover table-bordered">
+							<thead>
+								<tr>
+									<th class="text-decoration-underline">Fecha y hora:</th>
+									<th>JUEVES 15 DE JUNIO</th>
+									<th>VIERNES 16 DE JUNIO</th>
+									<th>LUNES 19 DE JUNIO</th>
+									<th>MARTES 20 DE JUNIO</th>
+									<th>MIÉRCOLES 21 DE JUNIO</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="fw-bold">8:30 - 10:30</td>
+									<td>PROGRAMACIÓN Y COMPUTACIÓN.</td>
+									<td>AMPICACIÓN DE LENGUA.<br>LATÍN.</td>
+									<td>LENGUA.</td>
+									<td>FÍSICA.<br>BIOLOGÍA.<br>HISTORIA DEL ARTE.</td>
+									<td>GEOGRAFÍA</td>
+								</tr>
+								<tr>
+									<td class="fw-bold">10:50 - 12:50</td>
+									<td>MATEMÁTICAS.<br>CIENCIAS.<br>MATEMÁTICAS.<br>CCSS.</td>
+									<td>INGLÉS.</td>
+									<td>ECONOMÍA.</td>
+									<td>FUNDAMENTOS DE ADMINISTRACIÓN.</td>
+									<td>HISTORIA DE ESPAÑA.</td>
+								</tr>
+								<tr>
+									<td class="fw-bold">13:00 - 15:00</td>
+									<td>...</td>
+									<td>FILOSOFÍA.<br>PSICOLOGÍA (entrega de trabajos).</td>
+									<td>DIBUJO TÉCNICO.</td>
+									<td>...</td>
+									<td>...</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<p class="fw-bold">Los alumnos que tengan la asignatura de CIUDADANÍA suspensa, deberán consultar en Moodle. En dicha plataforma la profesora indicará los trabajos a realizar y la fecha y hora de entrega.</p>
+				</div>
+				<hr class="second-bach-info-hr">
+				<div class="second-bach-info-content rounded">
+					<div class="p-2 second-bach-info-content-title rounded">
+						<p class="fw-bold text-light">Resolución en BOJA sobre Calendario PEVAU 2022/2023.</p>
+					</div>
+					<p class="mt-3 fw-bold">El miércoles 30 de Noviembre se ha publicado en BOJA la
+						<a class="text-success" href="https://www.juntadeandalucia.es/eboja/2022/230/BOJA22-230-00005-19460-01_00272654.pdf" target="_blank">Resolución de 24 de noviembre de 2022, de la Dirección General de Coordinación Universitaria, por la que se hace público el Acuerdo de 9 de noviembre de 2022, de la Comisión Coordinadora Interuniversitaria de Andalucía, por el que se establecen los plazos, el calendario y el cálculo de notas de las pruebas de evaluación de Bachillerato para el acceso a la universidad y de las pruebas de admisión que se celebrarán en el curso 2022/2023.</a>
+					</p>
+					<div class="d-flex justify-content-center">
+						<a href="https://www.juntadeandalucia.es/eboja/2022/230/BOJA22-230-00005-19460-01_00272654.pdf" target="_blank"><img id="boja-img" src="{{ asset('images/second_bach_info/boja.jpg') }}" alt="BOJA" class="rounded"/></a>
+					</div>
+					<div class="mt-3">
+						<p>Como resumen e importante, se confirman las fechas de celebración de las pruebas en:</p>
+						<ul>
+							<li>Convocatoria ordinaria se realizará los días 13, 14 y 15 de junio de 2023.</li>
+							<li>Convocatoria extraordinaria los días 11, 12 y 13 de julio de 2023 (NO HAY SEPTIEMBRE).</li>
+						</ul>
+						<p>Y se establece el horario de las pruebas:</p>
+						<div class="d-flex justify-content-center">
+							<img id="conv-img" src="{{ asset('images/second_bach_info/convocatoria.jpg') }}" alt="Convocatoria" class="rounded"/>
+						</div>
+						<p>Enlaces de ayuda:</p>
+						<ul>
+							<li><a href="https://www.uma.es/acceso/info/122158/matriculacion-en-las-pruebas/" target="_blank">Inscripción en las pruebas y plazos para la liquidación de precios públicos.</a></li>
+							<li><a href="https://www.juntadeandalucia.es/economiaconocimientoempresasyuniversidad/sguit/?q=grados&d=g_b_examenes_anteriores.php" target="_blank">Exámenes y orientaciones sobre la prueba de acceso y/o admisión a la Universidad.</a></li>
+						</ul>
+					</div>
+				</div>
+				<hr class="second-bach-info-hr">
+				<div class="second-bach-info-content rounded">
+					<div class="p-2 second-bach-info-content-title rounded">
+						<p class="fw-bold text-light">Premios Extraordinarios Bachillerato 2021/2022.</p>
+					</div>
+					<div class="d-flex justify-content-center mt-3">
+						<img id="awards-img" src="{{ asset('images/second_bach_info/bach_awards.jpg') }}" alt="Premios Extraordinarios Bachillerato" class="rounded"/>
+					</div>
+					<p class="mt-3">Se va a publicar en el tablón de anuncios de nuestro centro, la relación de candidatos/a propuestos/as del Premio Extraordinario de Bachillerato, tal como se recoge en la Normativa que lo rige y que se puede
+						<a href="https://www.juntadeandalucia.es/educacion/portals/web/ced/novedades/-/contenidos/detalle/convocados-los-premios-extraordinarios-de-bachillerato-correspondientes-al-curso-2021" class="text-danger" target="_blank">consultar aquí.</a>
+					</p>
+					<p>Resumiendo lo que ahí dice:</p>
+					<ul class="list-unstyled">
+						<li class="ps-4 mt-2">- Podrá presentarse a los premios el alumnado que finalice sus estudios de Bachillerato en la convocatoria ordinaria y obtenga una calificación media igual o superior a 8´75.</li>
+						<li class="ps-4 mt-2">- Las pruebas se celebrarán el día 28 de junio de 2022 con el siguiente horario:</li>
+						<ul class="list-unstyled ps-4 mt-2">
+							<li class="ps-4">09:30 a 11:30 horas ---> el primer ejercicio.</li>
+							<li class="ps-4">12:00 a 14:00 horas ---> el segundo ejercicio.</li>
+						</ul>
+						<li class="ps-4 mt-2">- Los ejercicios son:</li>
+						<ul class="ps-4 mt-2">
+							<li class="fw-bold ms-5">Primer ejercicio:</li>
+							<ul class="list-unstyled ps-4 mt-2">
+								<li class="ps-4">a) Comentario crítico de un texto filosófico y respuesta a las cuestiones planteadas sobre el mismo (se podrá elegir entre dos opciones).</li>
+								<li class="ps-4">b) Análisis de un texto en el idioma cursado en la materia de Primera Lengua Extranjera en segundo y respuesta a cuestiones de carácter cultural, literario y/o gramatical.</li>
+								<li class="ps-4 mt-3">Duración del ejercicio: 2 horas.</li>
+								<li class="ps-4 mt-3">Valoración del ejercicio. Cada una de las dos partes que constituyen este ejercicio se calificará entre 0 y 10, con un máximo de dos decimales.</li>
+							</ul>
+							<li class="fw-bold ms-5">Segundo ejercicio:</li>
+							<ul class="list-unstyled ps-4 mt-2">
+								<li class="ps-4">a) Comentario de un texto histórico y respuesta a cuestiones relacionadas con el mismo.</li>
+								<li class="ps-4">b) Desarrollo de un tema, respuesta a cuestiones y/o ejercicios prácticos sobre la materia troncal general de modalidad cursada en segundo de Bachillerato</li>
+								<li class="ps-4 mt-3">Duración del ejercicio: 2 horas.</li>
+								<li class="ps-4 mt-3">Valoración del ejercicio. Cada una de las dos partes que constituyen este ejercicio se calificará entre 0 y 10, con un máximo de dos decimales.</li>
+							</ul>
+						</ul>
+						<li class="ps-4 mt-2">- Los efectos de la obtención de los premios son los siguientes:</li>
+						<ul class="ps-4 mt-2">
+							<li class="ms-5">La obtención de Premio Extraordinario de Bachillerato será anotada en el expediente académico del alumno/a.</li>
+							<li class="ms-5">Conforme a lo que dispongan las Universidades Públicas de Andalucía, los alumnos/as que obtengan el Premio Extraordinario de Bachillerato estarán exentos del pago de los precios públicos en el primer curso de estudios universitarios.</li>
+							<li class="ms-5">Los alumnos/as que obtengan Premio Extraordinario podrán presentarse a la convocatoria de los Premios Nacionales de Bachillerato.</li>
+						</ul>
+					</ul>
+				</div>
+				<hr class="second-bach-info-hr">
+				<div class="second-bach-info-content rounded">
+					<div class="p-2 second-bach-info-content-title rounded">
+						<p class="fw-bold text-light">INSTRUCCIONES PARA ALUMNADO DE 2º BACHILLERATO.</p>
+					</div>
+					<div class="d-flex justify-content-center">
+						<img id="instructions_img" src="{{ asset('images/second_bach_info/instructions.jpg') }}" alt="Instrucciones Alumnado 2º Bachillerato" class="mt-3 rounded"/>
+					</div>
+					<p class="mt-3">
+						<i class="fa-solid fa-file-pdf" style="color: #FF0000;"></i>
+						<a href="https://www.dropbox.com/scl/fi/k1mihgczin783jq6nttbm/FECHAS%20Y%20PLAZOS%20DE%202%C2%BA%20DE%20BACHILLERATO%202022.pdf?rlkey=59j88g4mc7crkhqmmzw9wtevm&e=1&dl=0" class="text-dark ms-1 fw-bold" target="_blank">PDF con todas las instrucciones</a>
+					</p>
+				</div>
+				<hr class="second-bach-info-hr">
+				<div class="second-bach-info-content rounded">
+					<div class="p-2 second-bach-info-content-title rounded">
+						<p class="fw-bold text-light">SOLICITA TU BECA AMUM.</p>
+					</div>
+					<p class="mt-3">La Asociación de Mujeres Universitarias de Marbella (AMUM) cuya principal finalidad es impulsar el desarrollo de la educación y promover la participación de las mujeres en todos los ámbitos de la sociedad, ha convocado, para el curso 2020-2023, un conjunto de becas de ayuda económica para impulsar la formación de nuevas mujeres universitarias.</p>
+					<a href="https://amum.es/wp-content/uploads/2022/03/Base-becas-AMUM-2022-2023.pdf" target="_blank" class="text-purple fw-bold">Consulta las bases para solicitar la beca para el próximo curso</a>
+					<p>Si eres estudiante de 2º de Bachillerato y cumples los siguientes requisitos:</p>
+					<ul>
+						<li class="list-style">Ser mujer. 👩🏻</li>
+						<li class="list-style">Tener residencia habitual e ininterrumpida en el municipio de Marbella o San Pedro de Alcántara, durante segundo Bachillerato. 🏠</li>
+						<li class="list-style">Haber obtenido una nota media mínima de 8 puntos sobre 10. Para el cálculo de esta nota media se computarán las notas medias de los dos cursos de Bachillerato y de Selectividad (Fase General). ✔</li>
+						<li class="list-style">Que los ingresos de su unidad familiar no superen los cuarenta mil euros anuales. 💶💶</li>
+					</ul>
+					<p>Te invitamos, el viernes 13 de mayo a las 11:30 en el aula de 2ºESO F, a asistir a una reunión para informar sobre los requisitos y documentación necesaria para solicitar las becas.</p>
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}
