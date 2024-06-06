@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Información Para Alumnos Con Materias Pendientes
+{% endblock %}
+
+{% block body %}
+	<main class="p-3 mt-3 mb-3 rounded overflow-hidden">
+		<div id="info-students-container" class="p-2 rounded">
+			<div>
+				<h1 class="text-center title">I.E.S. Salduba - Información para Alumnos con Materias Pendientes</h1>
+			</div>
+			<div class="d-flex flex-column align-items-center">
+				<div class="info-students-content rounded">
+					<div class="p-2 info-students-content-title rounded">
+						<p class="fw-bold text-light">CURSO 23/24:INFORMACIÓN IMPORTANTE SOBRE LA RECUPERACIÓN DE MATERIAS PENDIENTES DE CURSOS ANTERIORES.</p>
+					</div>
+					<p class="mt-3 fw-bold">El seguimiento de recuperación de materias pendientes para el presente curso, como ya se viene haciendo en cursos anteriores, se va a  realizar a través de la plataforma educativa
+						<a href="https://educacionadistancia.juntadeandalucia.es/centros/malaga/login" class="text-danger text-decoration-none">Moodle Centros.</a>
+					</p>
+					<p class="fw-bold">
+						El alumnado con materias pendientes ya se encuentra matriculado en las asignaturas correspondientes y desde el curso de cada materia tiene acceso al material y actividades necesarios, así como las fechas  relevantes de exámenes y/o entrega de actividades, para la recuperación de dicha  materia.
+					</p>
+					<p class="fw-bold">
+						El acceso a dicha plataforma se puede hacer a través del enlace anterior (Moodle Centros) o desde la página web de nuestro centro, en la zona de abajo del todo dónde se encuentran los enlaces a plataformas asociadas.
+					</p>
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}

@@ -134,7 +134,8 @@ main {
 #second-bach-info-container,
 #fp-info-container,
 #schooling-info-container,
-#library-container {
+#library-container,
+#info-students-container {
     background-color: rgb(218, 239, 247);
 }
 
@@ -195,7 +196,8 @@ main {
 
 .second-bach-info-content,
 .fp-info-content,
-.schooling-info-content {
+.schooling-info-content,
+.info-students-container {
     box-shadow: 0 0 10px 0px var(--bg-dark-blue) inset;
     padding: 1rem;
     width: 100%;
@@ -203,7 +205,8 @@ main {
 
 .second-bach-info-content-title,
 .fp-info-content-title,
-.schooling-info-content-title {
+.schooling-info-content-title,
+.info-students-content-title {
     background: linear-gradient(to right, var(--bg-dark-blue), var(--bg-light-blue));
     box-shadow: 7px -7px 0 0px rgb(0, 180, 0);
 }
