@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Biblioteca
+{% endblock %}
+
+{% block body %}
+	<main class="p-3 mt-3 mb-3 rounded overflow-hidden">
+		<div id="library-container" class="p-2 rounded">
+			<div>
+				<h1 class="text-center title">I.E.S. Salduba - Biblioteca</h1>
+			</div>
+			<div class="d-flex flex-column align-items-center">
+				<div>
+					<img id="library_img" src="{{ asset('images/library/library.jpg') }}" alt="Biblioteca" class="rounded"/>
+				</div>
+				<p class="m-3">La Biblioteca del IES Salduba se ubica en la planta baja del edificio 2 (antiguo “edificio Salduba”). Se puede acceder a ella desde el exterior, por una puerta lateral al lado de la puerta principal de entrada a dicho edificio; y, desde el interior, a través de tres puertas que dan al pasillo donde se encuentra la sala de profesores y el Departamento de Orientación. Está compuesta por dos salas de consulta y lectura, y por una sala “TIC” con ordenadores con acceso a Internet y espacio para jugar al ajedrez. En el edificio 1, la Biblioteca cuenta con el Aula de Lectura, una zona relajada de lectura, lugar donde se reúne el Club de Lectura de la Biblioteca.</p>
+				<p class="m-3">Tras muchos cursos funcionando, se puede decir que nuestra Biblioteca es un centro de recursos en el que todos los miembros de la comunidad educativa pueden leer, realizar tareas, estudiar, jugar al ajedrez o participar de las actividades de dinamización cultural y animación a la lectura. Actualmente cuenta con un catálogo de más de 10500 libros y recursos digitales.</p>
+				<ul class="list-unstyled m-3">
+					<li class="fw-bold">HORARIO</li>
+					<li class="mb-3">Está abierta todos los recreos, de 10:30 a 10:50 y de 12:50 a 13:00</li>
+					<li class="fw-bold">POLÍTICA DE PRÉSTAMOS</li>
+					<li class="mb-3">Los usuarios pueden llevarse prestados hasta tres libros o recursos digitales. La duración del préstamo es de quince días, pudiéndose renovar quince días más.</li>
+					<li class="fw-bold">PÉRDIDA Y DETERIORO DE LIBROS</li>
+					<li class="mb-3">Cuando un lector/a coge prestado un libro, debe examinar el ejemplar y comprobar que está en perfectas condiciones. El alumno/a se compromete a cuidar el libro y devolverlo en las mismas condiciones que se le cedió. Los lectores/as que devuelvan el ejemplar deteriorado deberán reponer el ejemplar por uno nuevo.Si un alumno/a pierde un libro, deberá comprar un ejemplar idéntico y entregarlo, a la mayor brevedad posible, a la biblioteca del centro.</li>
+					<li class="fw-bold">BLOG</li>
+					<li class="mb-3">A través del Blog de la Biblioteca se publican todas las actividades y exposiciones que se desarrollan, las efemérides, las novedades, los concursos propios del centro y de fuera del centro, etc. El Club de Lectura también dispone de su propio blog.</li>
+					<li class="fw-bold">CATÁLOGO “ON LINE” : BIBLIOWEB 2.0</li>
+					<li class="mb-3">La Biblioteca dispone de este gestor de catálogo, que tiene una zona pública que permite consultar a toda la comunidad educativa el catálogo desde casa. Incluso realizar reservas. Facilita el proceso al alumnado. <a href="https://www.juntadeandalucia.es/educacion/senecav2/seneca/biblioweb/portal/29011540" target="_blank" class="text-danger fw-bold text-decoration-none">PRUÉBALO</a></li>
+				</ul>
+			</div>
+		</div>
+	</main>
+{% endblock %}

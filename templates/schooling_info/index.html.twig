@@ -1,0 +1,187 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Información Escolarización
+{% endblock %}
+
+{% block body %}
+	<main class="p-3 mt-3 mb-3 rounded overflow-hidden">
+		<div id="schooling-info-container" class="p-2 rounded">
+			<div>
+				<h1 class="text-center title">I.E.S. Salduba - Información Escolarización</h1>
+			</div>
+			<div class="d-flex flex-column align-items-center">
+				<div class="schooling-info-content rounded">
+					<div class="p-2 schooling-info-content-title rounded">
+						<p class="fw-bold text-light">ESCOLARIZACIÓN 2023/2024 - ESO Y BACHILLERATO.</p>
+					</div>
+					<div class="d-flex justify-content-center mt-3">
+						<img id="schooling-img-1" src="{{ asset('images/schooling_info/schooling_1.jpg') }}" alt="Escolarización ESO y Bachillerato 23/24" class="rounded"/>
+					</div>
+					<p class="mt-3">Está abierto el periodo de escolarización (curso 2023/2024) en la E.S.O. y Bachillerato
+						<u>para los alumnos que no estén matriculados en el IES Salduba</u>
+					</p>
+					<ul class="list-unstyled">
+						<li class="fw-bold m-3">
+							<a href="https://www.juntadeandalucia.es/educacion/secretariavirtual/solicitudes/" target="_blank" class="text-dark">Presentación de solicitudes</a>
+						</li>
+						<li class="fw-bold m-3">
+							<a href="https://www.juntadeandalucia.es/educacion/portals/web/escolarizacion" target="_blank" class="text-dark">Más información en la web de escolarización de la Junta de Andalucía</a>
+						</li>
+						<li class="fw-bold m-3">Resumen de información:</li>
+						<ul>
+							<li class="fw-bold ms-4">
+								<a href="https://www.juntadeandalucia.es/educacion/portals/web/escolarizacion/infantil-a-bachillerato/normativa" target="_blank">Normativa</a>
+							</li>
+							<li class="fw-bold ms-4">
+								<a href="https://www.juntadeandalucia.es/educacion/portals/web/escolarizacion/infantil-a-bachillerato/calendario" target="_blank">Calendario</a>
+							</li>
+							<li class="fw-bold ms-4">
+								<a href="https://www.juntadeandalucia.es/educacion/portals/web/escolarizacion/infantil-a-bachillerato/preguntas-frecuentes" target="_blank">Preguntas frecuentes</a>
+							</li>
+							<li class="fw-bold ms-4">
+								<a href="https://www.juntadeandalucia.es/educacion/portals/web/escolarizacion/infantil-a-bachillerato/autobaremo" target="_blank">Autobaremo</a>
+							</li>
+						</ul>
+						<li class="fw-bold m-3">A RECORDAR:</li>
+						<li class="fw-bold m-3">No tienen que realizar ninguna gestión:</li>
+						<ul>
+							<li class="fw-bold ms-4">
+								Los alumnos que ya estén matriculados en el IES Salduba, pero sí tendrán que realizar matriculación en Julio.
+							</li>
+							(Este alumnado tiene plaza reservada para el próximo curso escolar 2023/2024 sin necesidad de hacer solicitud de acceso)
+							<li class="fw-bold ms-4">
+								Los alumnos que vengan de los centros de primaria Miguel Hernández y Al Ándalus, pero sí tendrán que realizar matriculación en Julio.
+							</li>
+							(Este alumnado tiene plaza reservada para el próximo curso escolar 2023/2024 sin necesidad de hacer solicitud de acceso)
+						</ul>
+						<li class="fw-bold m-3">
+							Para los que sí tengan que solicitar plaza, lean las instrucciones que aparecen en las tres últimas páginas del impreso.<br>
+							Por favor, en concreto pongan interés especialmente en los puntos destinados a:
+						</li>
+						<ul>
+							<li class="ms-4">
+								<b>Movilidad forzosa:</b>
+								Marcar este apartado conlleva la justificación del traslado al nuevo domicilio con tres documentos: vida laboral, certificado empresa y el de empadronamiento (los tres son necesarios).
+							</li>
+							<li class="ms-4">
+								<b>Deportista de alto nivel o rendimiento:</b>
+								Marcar este apartado conlleva estar inscrito en el Registro del Deporte de Rendimiento de Andalucía o justificarlo documentalmente. Estar federado no es ser deportista de alto nivel o rendimiento.
+							</li>
+							<li class="ms-4">
+								<b>Familia numerosa:</b>
+								Marcar este apartado conlleva la justificación del traslado al nuevo domicilio con tres documentos: vida laboral, certificado empresa y el de empadronamiento (los tres son necesarios).
+							</li>
+							<li class="ms-4">
+								<b>Familia monoparental:</b>
+								Marcar este apartado conlleva justificarlo con el carnet de familia numerosa u otro documento que acredite esta condición.
+							</li>
+							<li class="ms-4">
+								<b>Realizar actividad laboral o profesional</b>
+								por parte de las personas que ostentan la guarda y custodia del alumno: Marcar este apartado conlleva justificar con informe vida laboral.
+							</li>
+							<li class="ms-4">
+								<b>Discapacidad:</b>
+								Marcar este apartado conlleva justificarlo documentalmente. El impreso de solicitud, destina un punto entero a esta circunstancia, por favor antes de mandar su impreso cumplimentado, compruebe que no ha marcado por error cualquiera de los apartados destinados a la discapacidad.
+							</li>
+						</ul>
+					</ul>
+				</div>
+				<hr class="info-hr">
+				<div class="schooling-info-content rounded">
+					<div class="p-2 schooling-info-content-title rounded">
+						<p class="fw-bold text-light">ESCOLARIZACIÓN 2023/2024 - ESO Y BACHILLERATO.</p>
+					</div>
+					<div class="d-flex justify-content-center mt-3">
+						<img id="schooling-img-2" src="{{ asset('images/schooling_info/schooling_2.jpg') }}" alt="Escolarización ESO y Bachillerato 22/23" class="rounded"/>
+					</div>
+					<p class="mt-3">Está abierto el periodo de escolarización (curso 2022/2023) en la E.S.O. y Bachillerato
+						<u>para los alumnos que no estén matriculados en el IES Salduba</u>
+					</p>
+					<ul class="list-unstyled">
+						<li class="fw-bold m-3">
+							<a href="https://www.juntadeandalucia.es/educacion/secretariavirtual/solicitudes/" target="_blank" class="text-dark">Presentación de solicitudes</a>
+						</li>
+						<li class="fw-bold m-3">
+							<a href="https://www.juntadeandalucia.es/educacion/portals/web/escolarizacion" target="_blank" class="text-dark">Más información en la web de escolarización de la Junta de Andalucía</a>
+						</li>
+						<li class="fw-bold m-3">Resumen de información:</li>
+						<ul>
+							<li class="fw-bold ms-4">
+								<a href="https://www.juntadeandalucia.es/educacion/portals/web/escolarizacion/infantil-a-bachillerato/normativa" target="_blank">Normativa</a>
+							</li>
+							<li class="fw-bold ms-4">
+								<a href="https://www.juntadeandalucia.es/educacion/portals/web/escolarizacion/infantil-a-bachillerato/calendario" target="_blank">Calendario</a>
+							</li>
+							<li class="fw-bold ms-4">
+								<a href="https://www.juntadeandalucia.es/educacion/portals/web/escolarizacion/infantil-a-bachillerato/preguntas-frecuentes" target="_blank">Preguntas frecuentes</a>
+							</li>
+							<li class="fw-bold ms-4">
+								<a href="https://www.juntadeandalucia.es/educacion/portals/web/escolarizacion/infantil-a-bachillerato/autobaremo" target="_blank">Autobaremo</a>
+							</li>
+						</ul>
+						<li class="fw-bold m-3">A RECORDAR:</li>
+						<li class="fw-bold m-3">No tienen que realizar ninguna gestión:</li>
+						<ul>
+							<li class="fw-bold ms-4">
+								Los alumnos que ya estén matriculados en el IES Salduba, pero sí tendrán que realizar matriculación en Julio.
+							</li>
+							(Este alumnado tiene plaza reservada para el próximo curso escolar 2023/2024 sin necesidad de hacer solicitud de acceso)
+							<li class="fw-bold ms-4">
+								Los alumnos que vengan de los centros de primaria Miguel Hernández y Al Ándalus, pero sí tendrán que realizar matriculación en Julio.
+							</li>
+							(Este alumnado tiene plaza reservada para el próximo curso escolar 2023/2024 sin necesidad de hacer solicitud de acceso)
+						</ul>
+						<li class="fw-bold m-3">
+							Para los que sí tengan que solicitar plaza, lean las instrucciones que aparecen en las tres últimas páginas del impreso.<br>
+							Por favor, en concreto pongan interés especialmente en los puntos destinados a:
+						</li>
+						<ul>
+							<li class="ms-4">
+								<b>Movilidad forzosa:</b>
+								Marcar este apartado conlleva la justificación del traslado al nuevo domicilio con tres documentos: vida laboral, certificado empresa y el de empadronamiento (los tres son necesarios).
+							</li>
+							<li class="ms-4">
+								<b>Deportista de alto nivel o rendimiento:</b>
+								Marcar este apartado conlleva estar inscrito en el Registro del Deporte de Rendimiento de Andalucía o justificarlo documentalmente. Estar federado no es ser deportista de alto nivel o rendimiento.
+							</li>
+							<li class="ms-4">
+								<b>Familia numerosa:</b>
+								Marcar este apartado conlleva la justificación del traslado al nuevo domicilio con tres documentos: vida laboral, certificado empresa y el de empadronamiento (los tres son necesarios).
+							</li>
+							<li class="ms-4">
+								<b>Familia monoparental:</b>
+								Marcar este apartado conlleva justificarlo con el carnet de familia numerosa u otro documento que acredite esta condición.
+							</li>
+							<li class="ms-4">
+								<b>Realizar actividad laboral o profesional</b>
+								por parte de las personas que ostentan la guarda y custodia del alumno: Marcar este apartado conlleva justificar con informe vida laboral.
+							</li>
+							<li class="ms-4">
+								<b>Discapacidad:</b>
+								Marcar este apartado conlleva justificarlo documentalmente. El impreso de solicitud, destina un punto entero a esta circunstancia, por favor antes de mandar su impreso cumplimentado, compruebe que no ha marcado por error cualquiera de los apartados destinados a la discapacidad.
+							</li>
+						</ul>
+					</ul>
+				</div>
+				<hr class="info-hr">
+				<div class="schooling-info-content rounded">
+					<div class="p-2 schooling-info-content-title rounded">
+						<p class="fw-bold text-light">Procedimiento de Escolarización en la FP Andaluza.</p>
+					</div>
+					<p class="mt-3">
+						La Formación Profesional Andaluza ha elaborado unos videos explicativos en relación a los procedimientos de escolarización en las distintas enseñanzas y modalidades. Os adjuntamos los mismos por si os sirven de ayuda: <b><i>(RECORDAR que en nuestro centro, el IES Salduba, solo tenemos Ciclos de GM, de GS y FP Básica)</i></b>
+					</p>
+					<div class="d-flex justify-content-center flex-wrap gap-2">
+						<a href="https://www.youtube.com/watch?v=CDG-b_QKLDE&ab_channel=Formaci%C3%B3nProfesionalAndaluza" target="_blank"><img src="{{ asset('images/schooling_info/schooling_basic_fp.jpg') }}" alt="FP Básica" class="schooling-info-videos-img"/></a>
+						<a href="https://www.youtube.com/watch?v=1-su2x-AsqM&ab_channel=Formaci%C3%B3nProfesionalAndaluza" target="_blank"><img src="{{ asset('images/schooling_info/schooling_gm_gs.jpg') }}" alt="Ciclos GM y GS" class="schooling-info-videos-img"/></a>
+						<a href="https://www.youtube.com/watch?v=193pIgsP8jg&ab_channel=Formaci%C3%B3nProfesionalAndaluza" target="_blank"><img src="{{ asset('images/schooling_info/schooling_specialization.jpg') }}" alt="Cursos Especialización" class="schooling-info-videos-img"/></a>
+						<a href="https://www.youtube.com/watch?v=bz2meZfWMc0&ab_channel=Formaci%C3%B3nProfesionalAndaluza" target="_blank"><img src="{{ asset('images/schooling_info/schooling_distance_education.jpg') }}" alt="Enseñanza a distancia y Oferta Parcial Diferenciada" class="schooling-info-videos-img"/></a>
+						<a href="https://www.youtube.com/watch?v=Ktl2tQtim9o&ab_channel=Formaci%C3%B3nProfesionalAndaluza" target="_blank"><img src="{{ asset('images/schooling_info/schooling_gm_access.jpg') }}" alt="Cursos de Acceso Ciclos GM" class="schooling-info-videos-img"/></a>
+						<a href="https://www.youtube.com/watch?v=JTm-T0u-WWQ&ab_channel=Formaci%C3%B3nProfesionalAndaluza" target="_blank"><img src="{{ asset('images/schooling_info/schooling_teaching_modelities.jpg') }}" alt="Enseñanzas y modalidades en FP" class="schooling-info-videos-img"/></a>
+					</div>
+				</div>
+				<hr class="info-hr">
+			</div>
+		</div>
+	</main>
+{% endblock %}
