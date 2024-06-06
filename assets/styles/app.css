@@ -131,7 +131,8 @@ main {
 #contact-container,
 #school-plan-container,
 #educative-proyect-container,
-#second-bach-info-container {
+#second-bach-info-container,
+#fp-info-container {
     background-color: rgb(218, 239, 247);
 }
 
@@ -190,13 +191,15 @@ main {
     width: 700px;
 }
 
-.second-bach-info-content {
+.second-bach-info-content,
+.fp-info-content {
     box-shadow: 0 0 10px 0px var(--bg-dark-blue) inset;
     padding: 1rem;
     width: 100%;
 }
 
-.second-bach-info-content-title {
+.second-bach-info-content-title,
+.fp-info-content-title {
     background: linear-gradient(to right, var(--bg-dark-blue), var(--bg-light-blue));
     box-shadow: 7px -7px 0 0px rgb(0, 180, 0);
 }
@@ -277,6 +280,16 @@ td {
     height: 308px;
 }
 
+#escolarizacion-fp-img {
+    width: 700px;
+    height: 473px;
+}
+
+#requests-img {
+    width: 700px;
+    height: 187px;
+}
+
 @font-face {
     font-family: 'title';
     src: url('../fonts/title.ttf');
@@ -317,17 +330,17 @@ td {
         width: 167px;
         height: 41px;
     }
-    
+
     #matriculacion-iande-img {
         width: 134px;
         height: 62px;
     }
-    
+
     #ipasen-img {
         width: 66px;
         height: 66px;
     }
-    
+
     #moodle-img {
         width: 134px;
         height: 70px;
@@ -488,5 +501,25 @@ td {
     #plans_programs_img {
         width: 200px;
         height: 159px;
+    }
+
+    .carousel-location-content {
+        width: 300px;
+        height: 225px;
+    }
+
+    #anexo-img {
+        width: 300px;
+        height: 181px;
+    }
+
+    #escolarizacion-fp-img {
+        width: 300px;
+        height: 202px;
+    }
+
+    #requests-img {
+        width: 300px;
+        height: 86px;
     }
 }

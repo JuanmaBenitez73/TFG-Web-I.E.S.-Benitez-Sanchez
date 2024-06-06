@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ROF
+{% endblock %}
+
+{% block body %}
+	<main class="p-3 mt-3 mb-3 rounded overflow-hidden">
+		<div id="educative-proyect-container" class="p-1 rounded">
+			<div>
+				<h1 class="text-center title">I.E.S. Salduba - ROF</h1>
+			</div>
+			<div>
+				<h4 class="text-center">Reglamento de Organización y Funcionamiento 2023/2024</h4>
+			</div>
+			<div class="d-flex flex-column align-items-start">
+				<hr class="second-bach-info-hr">
+				<p class="mt-3 ms-3">
+					<i class="fa-solid fa-file-pdf" style="color: #FF0000;"></i>
+					<a href="{{ asset('pdf/rof/1-ROF_con_modificaciones_10-04-2024.pdf') }}" class="text-dark ms-1 fw-bold" target="_blank">ROF con modificaciones 10/04/2024</a>
+				</p>
+				<hr class="second-bach-info-hr">
+				<p class="mt-3 ms-3">
+					<i class="fa-solid fa-file-pdf" style="color: #FF0000;"></i>
+					<a href="{{ asset('pdf/rof/2-ROF_2023-2024_con_modificaciones_16-01.pdf') }}" class="text-dark ms-1 fw-bold" target="_blank">ROF 2023/2024 con modificaciones 16/01</a>
+				</p>
+				<hr class="second-bach-info-hr">
+				<p class="mt-3 ms-3">
+					<i class="fa-solid fa-file-pdf" style="color: #FF0000;"></i>
+					<a href="{{ asset('pdf/rof/3-ROF_2023_2024.pdf') }}" class="text-dark ms-1 fw-bold" target="_blank">ROF 2023/2024</a>
+				</p>
+				<hr class="second-bach-info-hr">
+				<p class="mt-3 ms-3">
+					<i class="fa-solid fa-file-pdf" style="color: #FF0000;"></i>
+					<a href="{{ asset('pdf/rof/4-ROF_2022_2023.pdf') }}" class="text-dark ms-1 fw-bold" target="_blank">ROF 2022/2023</a>
+				</p>
+				<hr class="second-bach-info-hr">
+			</div>
+		</div>
+	</main>
+{% endblock %}
