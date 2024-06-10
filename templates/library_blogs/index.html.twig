@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Blogs Biblioteca
+{% endblock %}
+
+{% block body %}
+	<main class="p-3 mt-3 mb-3 rounded overflow-hidden content">
+		<div id="library-blogs-container" class="p-1 rounded">
+			<div>
+				<h1 class="text-center title">I.E.S. Salduba - Blogs de la Biblioteca</h1>
+			</div>
+			<br>
+			<div>
+				<div class="text-center">
+					<div id="info-text" class="fw-bold">
+						<div class="d-flex flex-column align-items-center">
+							<div class="fs-blog d-flex align-items-center gap-2">
+								<i class="fa-solid fa-book"></i>
+								<p class="mb-0"><a href="https://iessaldubabiblioteca.blogspot.com/" target="_blank" class="text-dark text-decoration-none blogs">Blog de la Biblioteca</a></p>
+							</div>
+							<br>
+							<div class="fs-blog d-flex align-items-center gap-2">
+								<i class="fa-brands fa-instagram"></i>
+								<p class="mb-0"><a href="https://www.instagram.com/bibliosalduba/" target="_blank" class="text-dark text-decoration-none blogs">Instagram de la Biblioteca</a></p>
+							</div>
+							<br>
+							<div class="fs-blog d-flex align-items-center gap-2">
+								<i class="fa-solid fa-book-open"></i>
+								<p class="mb-0"><a href="https://clublecturasalduba.blogspot.com/" target="_blank" class="text-dark text-decoration-none blogs">Blog del club de lectura</a></p>
+							</div>
+							<br>
+							<div class="fs-blog d-flex align-items-center gap-2">
+								<i class="fa-brands fa-blogger"></i>
+								<p class="mb-0"><a href="https://letrasencaliessalduba.blogspot.com/" target="_blank" class="text-dark text-decoration-none blogs">Blog "El rincón literario del Instituto Salduba"</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}

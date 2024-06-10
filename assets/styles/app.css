@@ -62,7 +62,8 @@ main {
 }
 
 .mail:hover,
-.link:hover {
+.link:hover,
+.blogs:hover {
     text-decoration: underline !important;
 }
 
@@ -135,7 +136,9 @@ main {
 #fp-info-container,
 #schooling-info-container,
 #library-container,
-#info-students-container {
+#info-students-container,
+#library-blogs-container,
+#contact-dace-container {
     background-color: rgb(218, 239, 247);
 }
 
@@ -553,5 +556,9 @@ td {
     #schooling-img-2 {
         width: 300px;
         height: 125px;
+    }
+
+    .fs-blog {
+        font-size: small;
     }
 }
