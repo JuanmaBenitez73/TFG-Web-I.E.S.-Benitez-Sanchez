@@ -138,7 +138,8 @@ main {
 #library-container,
 #info-students-container,
 #library-blogs-container,
-#contact-dace-container {
+#contact-dace-container,
+#contact-ampa-container {
     background-color: rgb(218, 239, 247);
 }
 
