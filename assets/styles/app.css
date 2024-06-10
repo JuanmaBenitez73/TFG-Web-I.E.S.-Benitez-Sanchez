@@ -139,7 +139,9 @@ main {
 #info-students-container,
 #library-blogs-container,
 #contact-dace-container,
-#contact-ampa-container {
+#contact-ampa-container,
+#dace-info-container,
+#ampa-info-container {
     background-color: rgb(218, 239, 247);
 }
 
@@ -309,6 +311,10 @@ td {
 .schooling-info-videos-img {
     width: 250px;
     height: 185px;
+}
+
+.grey-bg-img {
+    box-shadow: 0 0 8px 0px var(--black);
 }
 
 @font-face {
