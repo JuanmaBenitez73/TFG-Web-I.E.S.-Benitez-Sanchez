@@ -203,7 +203,8 @@ main {
 .second-bach-info-content,
 .fp-info-content,
 .schooling-info-content,
-.info-students-container {
+.info-students-container,
+.ampa-info-content {
     box-shadow: 0 0 10px 0px var(--bg-dark-blue) inset;
     padding: 1rem;
     width: 100%;
@@ -212,7 +213,8 @@ main {
 .second-bach-info-content-title,
 .fp-info-content-title,
 .schooling-info-content-title,
-.info-students-content-title {
+.info-students-content-title,
+.ampa-info-content-title {
     background: linear-gradient(to right, var(--bg-dark-blue), var(--bg-light-blue));
     box-shadow: 7px -7px 0 0px rgb(0, 180, 0);
 }
@@ -377,6 +379,10 @@ td {
         width: 500px;
         height: 208px;
     }
+    
+    .ampa-table {
+
+    }
 }
 
 @media (max-width: 40rem) {
@@ -385,7 +391,7 @@ td {
         gap: 1.5rem;
     }
 
-    .fs-xs {
+    .fs-xs, .school-plan-links, .ampa-table {
         font-size: x-small;
     }
 
@@ -484,10 +490,6 @@ td {
         height: 223px;
     }
 
-    .school-plan-links {
-        font-size: x-small;
-    }
-
     #table-container {
         overflow-x: auto;
     }
@@ -567,5 +569,10 @@ td {
 
     .fs-blog {
         font-size: small;
+    }
+
+    #ampa-img {
+        width: 300px;
+        height: 86px;
     }
 }

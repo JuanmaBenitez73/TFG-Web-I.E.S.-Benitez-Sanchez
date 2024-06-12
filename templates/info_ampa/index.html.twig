@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Información AMPA
+{% endblock %}
+
+{% block body %}
+	<main class="p-3 mt-3 mb-3 rounded overflow-hidden">
+		<div id="ampa-info-container" class="p-2 rounded">
+			<div>
+				<h1 class="text-center title">I.E.S. Salduba - Información AMPA</h1>
+			</div>
+			<div class="d-flex flex-column align-items-center">
+				<div class="ampa-info-content rounded">
+					<div class="p-2 fp-info-content-title rounded">
+						<p class="fw-bold text-light">Nueva AMPA - Su presentación.</p>
+					</div>
+					<div class="d-flex justify-content-center mt-3">
+						<img id="ampa-img" src="{{ asset('images/ampa_info/ampa.jpg') }}" alt="Información AMPA" class=""/>
+					</div>
+					<p class="mt-3">Desde la AMPA Atenea queremos, en primer lugar, presentarnos a toda la comunidad educativa, padres, madres y personal del centro. Nuestra asociación está inscrita en la Junta de Andalucía desde el pasado 10 de enero con el número 29-1-14486 y nace con el convencimiento de que colaborar entre todos es el mejor camino, el único camino, para la formación integral de nuestros hijos.</p>
+					<p>Todas las personas que estamos en la Junta directiva queremos además haceros llegar nuestra intención de trabajar con el objetivo de favorecer y mejorar la educación de nuestros hijos e hijas, porque entendemos que la educación es tarea de todos nosotros: padres, madres y escuela. Por eso, la Asociación cumple una importante función dentro de esta comunidad desde una doble vertiente:</p>
+					<ol>
+						<li>Apoyando al centro en aquello que nos solicita, ejerciendo de puente entre las familias de la Asociación y el centro, y siempre con el n de conseguir, entre todos, lo mejor para nuestros hijos.</li>
+						<li>Apoyando y asesorando a las familias en todo aquello que necesiten.</li>
+					</ol>
+					<p>Para ello necesitamos que vosotros, familias, os asociéis y forméis parte de este ilusionante proyecto y podéis hacerlo rellenando vuestros datos en el formulario de inscripción y pagando la cuota anual de 15€ por familia.</p>
+					<p>El formulario de inscripción podréis rellenarlo en el Centro, cuando paséis a pagar la cuota, o descargarlo de este enlace
+						<a href="https://bit.ly/AMPAAtenea" target="_blank" class="text-danger">(https://bit.ly/AMPAAtenea)</a>
+						y traerlo relleno de casa.</p>
+					<p>Estamos a vuestra disposición en el centro en los siguientes horarios:</p>
+					<table class="table table-bordered fs-xs">
+						<thead>
+							<tr class="text-center">
+								<th>LUNES</th>
+								<th>MARTES</th>
+								<th>MIÉRCOLES</th>
+								<th>JUEVES</th>
+								<th>VIERNES</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>8:30 - 13:00<br>18:00 - 20:00</td>
+								<td>8:30 - 13:00</td>
+								<td>8:30 - 13:00<br>18:00 - 20:00</td>
+								<td>8:30 - 13:00</td>
+								<td>8:30 - 13:00</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr class="info-hr">
+					<p>Gracias a todos y esperamos contar con vuestro apoyo.</p>
+					<p>LA JUNTA DIRECTIVA</p>
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}
