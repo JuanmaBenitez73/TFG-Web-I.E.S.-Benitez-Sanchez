@@ -18,6 +18,9 @@ framework:
     php_errors:
         log: true
 
+#    http_method_override: true
+#    trusted_hosts: ['^.*$']
+
 when@test:
     framework:
         test: true
