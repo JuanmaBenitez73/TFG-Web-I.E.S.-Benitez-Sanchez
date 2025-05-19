@@ -1,27 +1,25 @@
 :root {
-    --bg-light-blue: rgb(179, 205, 211);
-    --bg-dark-blue: rgb(28, 63, 96);
-    --white: rgb(255, 255, 255);
-    --black: rgb(0, 0, 0);
+    --black: #2A635A;
+    --white: #FFDDD2;
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: var(--bg-light-blue) !important;
+    background-color: var(--white) !important;
     margin: 0;
 }
 
 footer {
-    background-color: var(--bg-dark-blue);
+    background-color: var(--black);
     color: white;
     margin-top: auto;
 }
 
 nav,
 main {
-    background-color: var(--bg-dark-blue);
+    background-color: var(--black);
 }
 
 #nav-img {
@@ -30,31 +28,46 @@ main {
     box-shadow: 0 0 10px 0px var(--white);
 }
 
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
 .title {
     font-family: 'title', sans-serif;
 }
 
 .nav-title:hover {
-    text-shadow: 0px 0px 15px var(--black);
+    text-shadow: 0px 0px 15px var(--white);
 }
 
 .dropdownButton,
 .dropdown-container {
-    background-color: rgb(103, 134, 153) !important;
-    color: var(--white);
-    box-shadow: 0 0 8px 0px rgb(193, 234, 242);
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(100, 100, 100);
+    box-shadow: 0 0 8px 0px rgb(255, 255, 255);
 }
 
 .dropdown-container a {
-    background-color: rgb(103, 134, 153) !important;
-    color: var(--white);
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(100, 100, 100);
     font-weight: bold;
 }
 
 .dropdown-container a:hover {
-    background-color: var(--bg-light-blue) !important;
-    color: var(--bg-dark-blue);
-    text-shadow: 0px 0px 25px var(--bg-dark-blue);
+    background-color: rgb(230, 230, 230) !important;
+    color: var(--black);
+    text-shadow: 0px 0px 25px var(--black);
 }
 
 #emails {
@@ -125,6 +138,67 @@ main {
     ;
 }
 
+.details-button,
+.edit-button,
+.delete-button,
+.back-list-button,
+.create-button,
+.update-button {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.details-button {
+    background-color: rgb(0, 0, 255);
+}
+
+.details-button:hover {
+    background-color: rgb(50, 50, 255);
+}
+
+.edit-button {
+    background-color: rgb(255, 225, 0);
+}
+
+.edit-button:hover {
+    background-color: rgb(255, 255, 0);
+}
+
+.delete-button {
+    background-color: rgb(255, 0, 0);
+    border: none;
+}
+
+.delete-button:hover {
+    background-color: rgb(255, 100, 100);
+}
+
+.back-list-button {
+    background-color: rgb(0, 0, 255);
+}
+
+.back-list-button:hover {
+    background-color: rgb(50, 50, 255);
+}
+
+
+.create-button {
+    background-color: rgb(0, 225, 0);
+}
+
+.create-button:hover {
+    background-color: rgb(50, 255, 50);
+}
+
+.update-button {
+    background-color: rgb(255, 225, 0);
+    border: none;
+}
+
+.update-button:hover {
+    background-color: rgb(255, 255, 0);
+}
+
 #index-container,
 #organization-chart-container,
 #location-container,
@@ -142,7 +216,7 @@ main {
 #contact-ampa-container,
 #dace-info-container,
 #ampa-info-container {
-    background-color: rgb(218, 239, 247);
+    background-color: var(--white);
 }
 
 #organization-chart-content {
@@ -173,7 +247,7 @@ main {
 }
 
 #educative-offer-content {
-    background-color: var(--bg-dark-blue);
+    background-color: var(--black);
     width: max-content;
 }
 
@@ -200,23 +274,26 @@ main {
     width: 700px;
 }
 
+.home-info-content,
 .second-bach-info-content,
 .fp-info-content,
 .schooling-info-content,
 .info-students-container,
 .ampa-info-content {
-    box-shadow: 0 0 10px 0px var(--bg-dark-blue) inset;
+    box-shadow: 0 0 10px 0px var(--black) inset;
     padding: 1rem;
     width: 100%;
 }
 
+.home-info-content-title,
 .second-bach-info-content-title,
 .fp-info-content-title,
 .schooling-info-content-title,
 .info-students-content-title,
 .ampa-info-content-title {
-    background: linear-gradient(to right, var(--bg-dark-blue), var(--bg-light-blue));
-    box-shadow: 7px -7px 0 0px rgb(0, 180, 0);
+    background-color: var(--white);
+    border: 2px solid var(--black);
+    box-shadow: 7px -7px 0 0px var(--black);
 }
 
 th,
@@ -227,7 +304,7 @@ td {
 
 .info-hr {
     width: 100%;
-    border-top: 2px solid var(--bg-dark-blue);
+    border-top: 2px solid var(--black);
 }
 
 .footer-hr {
@@ -387,7 +464,9 @@ td {
         gap: 1.5rem;
     }
 
-    .fs-xs, .school-plan-links, .ampa-table {
+    .fs-xs,
+    .school-plan-links,
+    .ampa-table {
         font-size: x-small;
     }
 

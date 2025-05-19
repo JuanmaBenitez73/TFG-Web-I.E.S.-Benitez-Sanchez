@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editar
+	{{ home.title }}
+{% endblock %}
+
+{% block body %}
+	<main class="p-3 mt-3 mb-3 rounded overflow-hidden">
+		<div id="index-container" class="p-1 rounded">
+			<div>
+				<h1 class="text-center title">Editar:<br>
+					{{ home.title }}</h1>
+			</div>
+			<div class="p-4 text-justify">
+				{{ include('home/_form.html.twig') }}
+				<hr class="text-secondary">
+				<div class="d-flex align-items-center gap-2">
+					<a href="/" class="back-list-button py-2 px-3 rounded text-white">
+						<i class="fas fa-arrow-left"></i>
+						Back to list
+					</a>
+					{{ include('home/_delete_form.html.twig') }}
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}

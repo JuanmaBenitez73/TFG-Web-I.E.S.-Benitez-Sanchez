@@ -7,44 +7,49 @@
 	<main class="p-3 mt-3 mb-3 rounded overflow-hidden">
 		<div id="index-container" class="p-1 rounded">
 			<div>
-				<h1 class="text-center title">I.E.S. Salduba - Inicio</h1>
+				<h1 class="text-center title">Inicio</h1>
 			</div>
 			<div class="p-4 text-justify">
-				<p>
-					El
-					<span class="fw-bold">I.E.S. Salduba</span>
-					se encuentra situado en la localidad malagueña de
-					<span class="fw-bold">San Pedro Alcántara</span>, en
-					plena costa del sol occidental.
-					Es el centro de secundaria más antiguo de la localidad: fue creado como
-					<span class="fw-bold">I. B. Salduba.</span>
-					En la
-					década de los ochenta <span class="fw-bold">(curso 1983-84)</span>, aunque desde el curso
-					<span class="fw-bold">1978-79</span>
-					ya existió como
-					extensión del
-					<span class="fw-bold">I.B. Sierra Blanca de Marbella</span>. Durante muchos años fue el único centro de
-					bachillerato del pueblo. Algún tiempo después, se creó el centro de
-					<span class="fw-bold">Formación Profesional
-					Vega de Mar</span>
-					en una zona colindante.
-					En el año 1999, tras la reforma educativa, se produjo la fusión del
-					<span class="fw-bold">I.E.S. Salduba</span>
-					y el antiguo
-					centro de formación profesional, que, por entonces, ya era otro I.E.S. Todo ese conjunto
-					mantuvo el nombre de
-					<span class="fw-bold">I.E.S. Salduba</span>, mientras que el
-					<span class="fw-bold">I.E.S. Vega de Mar</span>
-					fue trasladado a un
-					antiguo colegio de primaria próximo a la zona de
-					<span class="fw-bold">Nueva Andalucía</span>.
-					Esa unificación convirtió al
-					<span class="fw-bold">I.E.S. Salduba</span>
-					en uno de los centros más grandes de la provincia
-					de Málaga, con todos los problemas de gestión y organización que ello conlleva, pues cuenta
-					con siete edificios diferentes, casi mil quinientos alumnos y alumnas y casi 120 profesoras y
-					profesores, dependiendo de los cursos.
-				</p>
+				{% for home in homes %}
+					<div class="text-justify">
+						<div class="home-info-content rounded mb-2">
+							<h1 class="text-center home-info-content-title rounded">{{ home.title }}</h1>
+							<p style="word-wrap: break-word; overflow-wrap:break-word; word-break: break-word">
+								<b>{{ home.description }}</b>
+							</p>
+							{% if home.image %}
+								<div class="d-flex justify-content-center">
+									<div style="width: 250px; height: 250px; overflow: hidden;">
+										<img src="images/home/{{ home.image }}" alt="{{ home.image }}" style="width: 100%; height: 100%;object-fit: cover;" class="rounded">
+									</div>
+								</div>
+							{% endif %}
+						</div>
+						<div class="d-flex align-items-center gap-2">
+							<a href="{{ path('app_home_show', {'id': home.id}) }}" class="details-button py-2 px-3 rounded text-white">
+								<i class="fas fa-eye"></i>
+								Ver detalles
+							</a>
+							<a href="{{ path('app_home_edit', {'id': home.id}) }}" class="edit-button py-2 px-3 rounded text-black">
+								<i class="fas fa-edit"></i>
+								Editar
+							</a>
+						</div>
+						<hr class="text-secondary">
+					</div>
+				{% else %}
+					<div class="text-center">
+						<p class="fw-bold fs-3">"No existen noticias 😔"</p>
+					</div>
+					<hr class="text-secondary">
+				{% endfor %}
+				<div class="d-flex justify-content-center">
+					<a href="{{path('app_home_new')}}" class="create-button py-2 px-3 rounded text-black">
+						<i class="fas fa-plus"></i>
+						Añadir noticia / información
+					</a>
+				</div>
+				<hr class="text-secondary">
 			</div>
 			<div class="d-flex justify-content-center">
 				<div id="myCarousel" class="carousel slide m-2 rounded carousel-home-content" data-bs-ride="carousel">
