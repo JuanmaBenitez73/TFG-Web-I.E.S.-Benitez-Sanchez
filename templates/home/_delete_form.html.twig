@@ -1,7 +1,31 @@
-<form method="post" action="{{ path('app_home_delete', {'id': home.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+<form method="post" action="{{ path('app_home_delete', {'id': home.id}) }}" id="delete-home-form">
 	<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ home.id) }}">
-	<button class="delete-button py-2 px-3 rounded text-white">
+	<button type="button" class="delete-button py-2 px-3 rounded text-white" data-bs-toggle="modal" data-bs-target="#confirmDeleteHomeModal">
 		<i class="fas fa-trash"></i>
 		Delete
 	</button>
 </form>
+
+<div class="modal fade" id="confirmDeleteHomeModal" tabindex="-1" aria-labelledby="confirmDeleteHomeModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="confirmDeleteHomeModalLabel">Confirmar borrado</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+			</div>
+			<div class="modal-body">
+				¿Seguro que quieres borrar esta noticia? Esta acción no se puede deshacer.
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+				<button type="button" class="btn btn-danger" id="confirm-delete-home-button">Sí, borrar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+ <script>
+document.getElementById('confirm-delete-home-button').addEventListener('click', function () {
+    document.getElementById('delete-home-form').submit();
+});
+</script>

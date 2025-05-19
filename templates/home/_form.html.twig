@@ -19,19 +19,19 @@
 </div>
 
 {% for label, messages in app.flashes %}
-    {% set bootstrap_class = {
+	{% set bootstrap_class = {
         'error': 'danger',
         'success': 'success',
         'warning': 'warning',
         'info': 'info'
     }[label]|default('info') %}
 
-    {% for message in messages %}
-        <div class="alert alert-{{ bootstrap_class }} alert-dismissible fade show" role="alert">
-            {{ message }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    {% endfor %}
+	{% for message in messages %}
+		<div class="alert alert-{{ bootstrap_class }} alert-dismissible fade show" role="alert">
+			{{ message }}
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+	{% endfor %}
 {% endfor %}
 
 <button class="update-button py-2 px-3 rounded text-black">
@@ -40,3 +40,21 @@
 </button>
 
 {{ form_end(form) }}
+
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="confirmDeleteModalLabel">Confirmar borrado</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+			</div>
+			<div class="modal-body">
+				¿Seguro que quieres borrar la imagen?
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+				<button type="button" class="btn btn-danger" id="confirm-delete-button">Sí, borrar</button>
+			</div>
+		</div>
+	</div>
+</div>

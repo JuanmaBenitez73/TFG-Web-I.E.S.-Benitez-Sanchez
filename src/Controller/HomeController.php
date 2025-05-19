@@ -12,6 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\String\Slugger\SluggerInterface;
+use Symfony\Component\Filesystem\Filesystem;
 
 #[Route('/home')]
 class HomeController extends AbstractController
@@ -28,7 +29,7 @@ class HomeController extends AbstractController
     public function new(Request $request, EntityManagerInterface $entityManager, SluggerInterface $slugger): Response
     {
         $home = new Home();
-        
+
         $form = $this->createForm(HomeType::class, $home);
         $form->handleRequest($request);
 
@@ -144,5 +145,26 @@ class HomeController extends AbstractController
         }
 
         return $this->redirect('/', Response::HTTP_SEE_OTHER);
+    }
+
+    #[Route('/home/{id}/delete-image', name: 'home_delete_image', methods: ['POST'])]
+    public function deleteImage(Request $request, Home $home, EntityManagerInterface $em): Response
+    {
+        if ($this->isCsrfTokenValid('delete_image' . $home->getId(), $request->request->get('_token'))) {
+            $filesystem = new Filesystem();
+
+            $imagePath = $this->getParameter('images_directory_home') . '/' . $home->getImage();
+
+            if ($home->getImage() && $filesystem->exists($imagePath)) {
+                $filesystem->remove($imagePath);
+            }
+
+            $home->setImage(null);
+            $em->flush();
+
+            $this->addFlash('success', 'Imagen borrada correctamente.');
+        }
+
+        return $this->redirectToRoute('app_home_edit', ['id' => $home->getId()]);
     }
 }
