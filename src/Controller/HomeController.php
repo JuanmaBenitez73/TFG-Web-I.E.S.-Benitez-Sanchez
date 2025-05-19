@@ -29,6 +29,7 @@ class HomeController extends AbstractController
     public function new(Request $request, EntityManagerInterface $entityManager, SluggerInterface $slugger): Response
     {
         $home = new Home();
+        
         $form = $this->createForm(HomeType::class, $home);
         $form->handleRequest($request);
 
