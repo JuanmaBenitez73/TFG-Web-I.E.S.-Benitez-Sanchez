@@ -16,7 +16,7 @@
 					{% if home.image %}
 						<div class="d-flex justify-content-center">
 							<div style="width: 250px; height: 250px; overflow: hidden;">
-								<img src="../images/home/{{ home.image }}" alt="{{ home.image }}" style="width: 100%; height: 100%;object-fit: cover;" class="rounded">
+								<img src="{{ asset('images/home/' ~ home.image) }}" alt="{{ home.image }}" style="width: 100%; height: 100%;object-fit: cover;" class="rounded">
 							</div>
 						</div>
 					{% endif %}
