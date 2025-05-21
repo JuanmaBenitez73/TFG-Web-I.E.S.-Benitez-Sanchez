@@ -7,6 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class HomeType extends AbstractType
 {
@@ -14,10 +15,15 @@ class HomeType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('description')
+            ->add('description', TextareaType::class, [
+                'attr' => [
+                    'class' => 'form-control',
+                    'rows' => 10,
+                ],
+            ])
             ->add('image', FileType::class, [
                 'label' => 'Imagen',
-                'mapped' => false, // Muy importante: evita que Symfony intente asignar el archivo directamente al string de la entidad
+                'mapped' => false,
                 'required' => false,
             ])
         ;

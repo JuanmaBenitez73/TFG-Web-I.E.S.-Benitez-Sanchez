@@ -19,16 +19,20 @@
 							<img src="{{ asset('images/home/' ~ home.image) }}" alt="{{ home.image }}" style="width: 100%; height: 100%;object-fit: cover;" class="rounded">
 						</div>
 					</div>
-					<form method="post" action="{{ path('home_delete_image', {'id': home.id}) }}" id="delete-image-form" class="mt-2">
-						<input type="hidden" name="_token" value="{{ csrf_token('delete_image' ~ home.id) }}">
-						<div class="d-flex justify-content-end">
-							<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">
-								<i class="fas fa-times-circle"></i>
-								<i class="fas fa-image"></i>
-								Borrar imagen
-							</button>
-						</div>
-					</form>
+					{% if app.session.get('user_id') is not null %}
+						{% if app.session.get('is_admin') %}
+							<form method="post" action="{{ path('home_delete_image', {'id': home.id}) }}" id="delete-image-form" class="mt-2">
+								<input type="hidden" name="_token" value="{{ csrf_token('delete_image' ~ home.id) }}">
+								<div class="d-flex justify-content-end">
+									<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">
+										<i class="fas fa-times-circle"></i>
+										<i class="fas fa-image"></i>
+										Borrar imagen
+									</button>
+								</div>
+							</form>
+						{% endif %}
+					{% endif %}
 				{% endif %}
 				<hr class="text-secondary">
 				<div class="d-flex align-items-center gap-2">
@@ -36,14 +40,18 @@
 						<i class="fas fa-arrow-left"></i>
 						Back to list
 					</a>
-					{{ include('home/_delete_form.html.twig') }}
+					{% if app.session.get('user_id') is not null %}
+						{% if app.session.get('is_admin') %}
+							{{ include('home/_delete_form.html.twig') }}
+						{% endif %}
+					{% endif %}
 				</div>
 			</div>
 		</div>
 	</main>
 	 <script>
-	document.getElementById('confirm-delete-button').addEventListener('click', function () {
-	    document.getElementById('delete-image-form').submit();
-	});
-	</script>
+				document.getElementById('confirm-delete-button').addEventListener('click', function () {
+				    document.getElementById('delete-image-form').submit();
+				});
+				</script>
 {% endblock %}

@@ -22,10 +22,12 @@
 					{% endif %}
 					<hr class="text-secondary">
 					<div class="d-flex align-items-center gap-2">
-						<a href="{{ path('app_home_edit', {'id': home.id}) }}" class="edit-button py-2 px-3 rounded text-black">
-							<i class="fas fa-edit"></i>
-							Editar
-						</a>
+						{% if app.session.get('user_id') is not null %}
+							<a href="{{ path('app_home_edit', {'id': home.id}) }}" class="edit-button py-2 px-3 rounded text-black">
+								<i class="fas fa-edit"></i>
+								Editar
+							</a>
+						{% endif %}
 						<a href="/" class="back-list-button py-2 px-3 rounded text-white">
 							<i class="fas fa-arrow-left"></i>
 							Back to list
