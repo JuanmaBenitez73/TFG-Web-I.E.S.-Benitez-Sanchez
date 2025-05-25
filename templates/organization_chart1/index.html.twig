@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Organigrama
+{% endblock %}
+
+{% block body %}
+	<main class="p-3 mt-3 mb-3 rounded overflow-hidden">
+		<div id="organization-chart-container" class="p-2 rounded">
+			<div>
+				<h1 class="text-center title">I.E.S. Salduba - Organigrama</h1>
+			</div>
+			<br>
+			<div id="organization-chart-content" class="d-grid gap-2">
+				<div class="bg-danger rounded p-2">
+					<h4 id="affiliates" class="text-center text-light text-shadow">Empresas asociadas</h4>
+					<div class="rounded p-2 organization-chart-affiliates">
+						{% for affiliate in affiliates %}
+							<div>
+								<p class="fw-bold">{{ affiliate.name }}</p>
+								<p>{{ affiliate.description }}</p>
+								<hr class="text-danger">
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="bg-warning rounded p-2">
+					<h4 id="departments" class="text-center text-light text-shadow">Departamentos</h4>
+					<div class="rounded p-2 organization-chart-departments">
+						{% for department in departments %}
+							<div>
+								<p class="fw-bold">{{ department.name }}</p>
+								<p>{{ department.description is not null ? department.description }}</p>
+								<hr class="text-warning">
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="bg-success rounded p-2">
+					<h4 id="staff" class="text-center text-light text-shadow">Personal</h4>
+					<div class="rounded p-2 organization-chart-staff">
+						{% for item in staff %}
+							<div>
+								<p class="fw-bold">{{ item.name }}</p>
+								<p>{{ item.description is not null ? item.description }}</p>
+								<p>{{ item.employe }}</p>
+								<p>{{ item.dni }}</p>
+								<p>{{ item.job }}</p>
+								<hr class="text-success">
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="bg-primary rounded p-2">
+					<h4 id="contact-information" class="text-center text-light text-shadow">Información de contacto</h4>
+					<div class="rounded p-2 organization-chart-contact-information">
+						{% for item in contactInformation %}
+							<div>
+								<p class="fw-bold">{{ item.name }}</p>
+								<p>{{ item.value }}</p>
+								<hr class="text-primary">
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}

@@ -199,8 +199,8 @@ main {
     background-color: rgb(255, 255, 0);
 }
 
-#index-container,
-#organization-chart-container,
+#home-container,
+#organization_chart-container,
 #location-container,
 #educative-offer-container,
 #contact-container,
@@ -219,31 +219,8 @@ main {
     background-color: var(--white);
 }
 
-#organization-chart-content {
-    grid-column: auto auto auto auto;
-    grid-template-areas:
-        "affiliates departments staff contact-information"
-    ;
-}
-
 .text-shadow {
     text-shadow: 0px 0px 3px var(--black);
-}
-
-.organization-chart-affiliates {
-    background-color: rgb(255, 222, 231);
-}
-
-.organization-chart-departments {
-    background-color: rgb(255, 246, 222);
-}
-
-.organization-chart-staff {
-    background-color: rgb(223, 255, 231);
-}
-
-.organization-chart-contact-information {
-    background-color: rgb(222, 229, 255);
 }
 
 #educative-offer-content {
@@ -275,6 +252,7 @@ main {
 }
 
 .home-info-content,
+.organization_chart-info-content,
 .second-bach-info-content,
 .fp-info-content,
 .schooling-info-content,
@@ -286,6 +264,7 @@ main {
 }
 
 .home-info-content-title,
+.organization_chart-info-content-title,
 .second-bach-info-content-title,
 .fp-info-content-title,
 .schooling-info-content-title,
@@ -519,16 +498,6 @@ td {
 
     #contact-information {
         grid-area: contact-information;
-    }
-
-    #organization-chart-content {
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas:
-            "affiliates"
-            "departments"
-            "staff"
-            "contact-information"
-        ;
     }
 
     #location-maps {

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New OrganizationChart{% endblock %}
+
+{% block body %}
+    <h1>Create new OrganizationChart</h1>
+
+    {{ include('organization_chart/_form.html.twig') }}
+
+    <a href="{{ path('app_organization_chart_index') }}">back to list</a>
+{% endblock %}
