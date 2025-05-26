@@ -1,11 +1,24 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New OrganizationChart{% endblock %}
+{% block title %}Nueva noticia
+{% endblock %}
 
 {% block body %}
-    <h1>Create new OrganizationChart</h1>
-
-    {{ include('organization_chart/_form.html.twig') }}
-
-    <a href="{{ path('app_organization_chart_index') }}">back to list</a>
+	<main class="p-3 mt-3 mb-3 rounded overflow-hidden">
+		<div id="organization_chart-container" class="p-1 rounded">
+			<div>
+				<h1 class="text-center title">Crear nueva noticia</h1>
+			</div>
+			<div class="p-4 text-justify">
+				{{ include('organization_chart/_form.html.twig') }}
+				<hr class="text-secondary">
+				<div class="d-flex align-items-center gap-2">
+					<a href="/organization_chart" class="back-list-button py-2 px-3 rounded text-white">
+						<i class="fas fa-arrow-left"></i>
+						Back to list
+					</a>
+				</div>
+			</div>
+		</div>
+	</main>
 {% endblock %}

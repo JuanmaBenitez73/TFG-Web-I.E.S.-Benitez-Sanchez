@@ -1,34 +1,40 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}OrganizationChart{% endblock %}
+{% block title %}
+	{{ organization_chart.title }}
+{% endblock %}
 
 {% block body %}
-    <h1>OrganizationChart</h1>
-
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ organization_chart.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ organization_chart.title }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ organization_chart.description }}</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td>{{ organization_chart.image }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_organization_chart_index') }}">back to list</a>
-
-    <a href="{{ path('app_organization_chart_edit', {'id': organization_chart.id}) }}">edit</a>
-
-    {{ include('organization_chart/_delete_form.html.twig') }}
+	<main class="p-3 mt-3 mb-3 rounded overflow-hidden">
+		<div id="organization_chart-container" class="p-1 rounded organization_chart-info-content">
+			<div>
+				<h1 class="text-center title">{{ organization_chart.title }}</h1>
+			</div>
+			<div class="p-4 text-justify">
+				<div>
+					<p style="word-wrap: break-word; overflow-wrap: break-word; word-break: break-word;">{{ organization_chart.description }}</p>
+					{% if organization_chart.image %}
+						<div class="d-flex justify-content-center">
+							<div style="max-width: 400px; max-height: 400px; overflow: hidden;">
+								<img src="{{ asset('images/organization_chart/' ~ organization_chart.image) }}" alt="{{ organization_chart.image }}" style="width: 100%; height: 100%;object-fit: cover;" class="rounded">
+							</div>
+						</div>
+					{% endif %}
+					<hr class="text-secondary">
+					<div class="d-flex align-items-center gap-2">
+						{% if app.session.get('user_id') is not null %}
+							<a href="{{ path('app_organization_chart_edit', {'id': organization_chart.id}) }}" class="edit-button py-2 px-3 rounded text-black">
+								<i class="fas fa-edit"></i>
+								Editar
+							</a>
+						{% endif %}
+						<a href="/organization_chart" class="back-list-button py-2 px-3 rounded text-white">
+							<i class="fas fa-arrow-left"></i>
+							Back to list
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
 {% endblock %}
