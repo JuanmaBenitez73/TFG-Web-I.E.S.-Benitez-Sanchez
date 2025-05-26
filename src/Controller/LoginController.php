@@ -50,9 +50,10 @@ class LoginController extends AbstractController
     }
 
     #[Route('/logout', name: 'app_logout')]
-    public function logout(SessionInterface $session): Response
+    public function logout(Request $request, SessionInterface $session): Response
     {
         $session->clear();
-        return $this->redirect('/');
+        $referer = $request->headers->get('referer');
+        return $this->redirect($referer ?? '/');
     }
 }

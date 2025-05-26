@@ -21,7 +21,8 @@ class OrganizationChartController extends AbstractController
     public function index(OrganizationChartRepository $organizationChartRepository): Response
     {
         return $this->render('organization_chart/index.html.twig', [
-            'organization_charts' => $organizationChartRepository->findAll(),
+            /* 'organization_charts' => $organizationChartRepository->findAll(), */ //Orden de creación
+            'organization_charts' => $organizationChartRepository->findBy([], ['id' => 'DESC']),//Más reciente primero
         ]);
     }
 

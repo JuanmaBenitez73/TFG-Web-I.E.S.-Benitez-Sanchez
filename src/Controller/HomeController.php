@@ -21,7 +21,8 @@ class HomeController extends AbstractController
     public function index(HomeRepository $homeRepository): Response
     {
         return $this->render('home/index.html.twig', [
-            'homes' => $homeRepository->findAll(),
+            /* 'homes' => $homeRepository->findAll(), */ //Orden de creación
+            'homes' => $homeRepository->findBy([], ['id' => 'DESC']), //Más reciente primero
         ]);
     }
 
