@@ -6,6 +6,7 @@
 parameters:
     images_directory_home: '%kernel.project_dir%/public/images/home'
     images_directory_organization_chart: '%kernel.project_dir%/public/images/organization_chart'
+    images_directory_educative_offer: '%kernel.project_dir%/public/images/educative_offer'
 
 services:
     # default configuration for services in *this* file

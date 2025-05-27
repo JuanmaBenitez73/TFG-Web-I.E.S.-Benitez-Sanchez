@@ -5,60 +5,55 @@
 
 {% block body %}
 	<main class="p-3 mt-3 mb-3 rounded overflow-hidden">
-		<div id="educative-offer-container" class="p-1 rounded">
+		<div id="educative_offer-container" class="p-1 rounded">
 			<div>
-				<h1 class="text-center title">I.E.S. Salduba - Oferta Educativa</h1>
+				<h1 class="text-center title">Oferta Educativa</h1>
 			</div>
-			<div class="d-flex flex-column align-items-center">
-				<p class="fw-bold p-3">
-					La oferta completa del Sistema Educativo es la siguiente (recordar que en nuestro centro ofertamos EBE, ESO, ESO para personas adultas, Bachillerato, CF Grado Básico, FP Grado medio y FP Grado superior):
-				</p>
-				<ul id="educative-offer-list">
-					<li class="fw-bold">Educación Básica Especial</li>
-					<ul>
-						<li>Educación especial unidad específica</li>
-					</ul>
-					<li class="fw-bold">Ciclo Formativo de Grado Básico</li>
-					<ul>
-						<li>
-							<a href="https://www.juntadeandalucia.es/educacion/portals/web/formacion-profesional-andaluza/fp-basica/detalle-titulo?idTitulo=146" target="_blank">Fabricación y montaje</a>
-						</li>
-					</ul>
-					<li class="fw-bold">Educación Secundaria Obligatoria</li>
-					<li class="fw-bold">Formación Profesional Inicial de Grado Medio</li>
-					<ul>
-						<li>
-							<a href="https://www.juntadeandalucia.es/educacion/portals/web/formacion-profesional-andaluza/fp-grado-medio/detalle-titulo?idTitulo=69" target="_blank">Estética y belleza</a>
-						</li>
-						<li>
-							<a href="https://www.juntadeandalucia.es/educacion/portals/web/formacion-profesional-andaluza/fp-grado-medio/detalle-titulo?idTitulo=64" target="_blank">Instalaciones frigoríficas y de climatización</a>
-						</li>
-						<li>
-							<a href="https://www.juntadeandalucia.es/educacion/portals/web/formacion-profesional-andaluza/fp-grado-medio/detalle-titulo?idTitulo=63" target="_blank">Jardinería y floristería</a>
-						</li>
-						<li>
-							<a href="https://www.juntadeandalucia.es/educacion/portals/web/formacion-profesional-andaluza/fp-grado-medio/detalle-titulo?idTitulo=99" target="_blank">Peluquería y cosmética capilar</a>
-						</li>
-						<li>
-							<a href="https://www.juntadeandalucia.es/educacion/portals/web/formacion-profesional-andaluza/fp-grado-medio/detalle-titulo?idTitulo=17" target="_blank">Sistemas microinformáticos y redes</a>
-						</li>
-					</ul>
-					<li class="fw-bold">Bachillerato</li>
-					<ul>
-						<li>Ciencias y Tecnología</li>
-						<li>Humanidades y Ciencias Sociales</li>
-					</ul>
-					<li class="fw-bold">Formación Profesional Inicial de Grado Superior</li>
-					<ul>
-						<li>
-							<a href="https://www.juntadeandalucia.es/educacion/portals/web/formacion-profesional-andaluza/fp-grado-superior/detalle-titulo?idTitulo=56" target="_blank">Desarrollo de aplicaciones web</a>
-						</li>
-						<li>
-							<a href="https://www.juntadeandalucia.es/educacion/portals/web/formacion-profesional-andaluza/fp-grado-superior/detalle-titulo?idTitulo=20" target="_blank">Desarrollo de proyectos de instalaciones térmicas y de fluidos</a>
-						</li>
-					</ul>
-					<li class="fw-bold">E.S.O. para personas adultas: Modalidad Semipresencial</li>
-				</ul>
+			<div class="p-4 text-justify">
+				{% for educative_offer in educative_offers %}
+					<div class="text-justify">
+						<div class="educative_offer-info-content rounded mb-2">
+							<h1 class="text-center educative_offer-info-content-title rounded">{{ educative_offer.title }}</h1>
+							<p style="word-wrap: break-word; overflow-wrap:break-word; word-break: break-word">
+								<b>{{ educative_offer.description }}</b>
+							</p>
+							{% if educative_offer.image %}
+								<div class="d-flex justify-content-center">
+									<div style="max-width: 400px; max-height: 400px; overflow: hidden; box-shadow: 0 0 25px #2A635A;">
+										<img src="{{ asset('images/educative_offer/' ~ educative_offer.image) }}" alt="{{ educative_offer.image }}" style="width: 100%; height: 100%;object-fit: cover;">
+									</div>
+								</div>
+							{% endif %}
+						</div>
+						<div class="d-flex align-items-center gap-2">
+							<a href="{{ path('app_educative_offer_show', {'id': educative_offer.id}) }}" class="details-button py-2 px-3 rounded text-white">
+								<i class="fas fa-eye"></i>
+								Ver detalles
+							</a>
+							{% if app.session.get('user_id') is not null %}
+								<a href="{{ path('app_educative_offer_edit', {'id': educative_offer.id}) }}" class="edit-button py-2 px-3 rounded text-black">
+									<i class="fas fa-edit"></i>
+									Editar
+								</a>
+							{% endif %}
+						</div>
+						<hr class="text-secondary">
+					</div>
+				{% else %}
+					<div class="text-center">
+						<p class="fw-bold fs-3">"No existe información 😔"</p>
+					</div>
+					<hr class="text-secondary">
+				{% endfor %}
+				{% if app.session.get('user_id') is not null %}
+					<div class="d-flex justify-content-center">
+						<a href="{{path('app_educative_offer_new')}}" class="create-button py-2 px-3 rounded text-black">
+							<i class="fas fa-plus"></i>
+							Añadir noticia / información
+						</a>
+					</div>
+					<hr class="text-secondary">
+				{% endif %}
 			</div>
 		</div>
 	</main>

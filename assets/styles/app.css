@@ -202,7 +202,7 @@ main {
 #home-container,
 #organization_chart-container,
 #location-container,
-#educative-offer-container,
+#educative_offer-container,
 #contact-container,
 #school-plan-container,
 #educative-proyect-container,
@@ -221,11 +221,6 @@ main {
 
 .text-shadow {
     text-shadow: 0px 0px 3px var(--black);
-}
-
-#educative-offer-content {
-    background-color: var(--black);
-    width: max-content;
 }
 
 .carousel-home-content {
@@ -253,6 +248,7 @@ main {
 
 .home-info-content,
 .organization_chart-info-content,
+.educative_offer-info-content,
 .second-bach-info-content,
 .fp-info-content,
 .schooling-info-content,
@@ -265,6 +261,7 @@ main {
 
 .home-info-content-title,
 .organization_chart-info-content-title,
+.educative_offer-info-content-title,
 .second-bach-info-content-title,
 .fp-info-content-title,
 .schooling-info-content-title,
@@ -273,6 +270,7 @@ main {
     background-color: var(--white);
     border: 2px solid var(--black);
     box-shadow: 7px -7px 0 0px var(--black);
+    font-family: 'news_title';
 }
 
 th,
@@ -329,18 +327,6 @@ td {
     height: 104px;
 }
 
-#educative-offer-list li {
-    margin-top: .5rem;
-}
-
-#educative-offer-list a {
-    color: var(--black) !important;
-}
-
-#educative-offer-list a:hover {
-    color: red !important;
-}
-
 .table-img {
     width: 75px;
     height: 75px;
@@ -378,6 +364,11 @@ td {
 @font-face {
     font-family: 'title';
     src: url('../fonts/title.ttf');
+}
+
+@font-face {
+    font-family: 'news_title';
+    src: url('../fonts/news_title.ttf');
 }
 
 @media (max-width: 60rem) {
@@ -503,11 +494,6 @@ td {
     #location-maps {
         width: auto;
         height: auto;
-    }
-
-    #educative-offer-image {
-        width: 300px;
-        height: 368px;
     }
 
     main {
