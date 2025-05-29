@@ -206,10 +206,10 @@ main {
 #school_plan-container,
 #educative_plan_program-container,
 #contact-container,
+#schooling_info-container,
 #educative-proyect-container,
 #second-bach-info-container,
 #fp-info-container,
-#schooling-info-container,
 #library-container,
 #info-students-container,
 #library-blogs-container,
@@ -248,9 +248,9 @@ main {
 .educative_offer-info-content,
 .school_plan-info-content,
 .educative_plan_program-info-content,
+.schooling_info-content,
 .second-bach-info-content,
 .fp-info-content,
-.schooling-info-content,
 .info-students-container,
 .ampa-info-content {
     box-shadow: 0 0 10px 0px var(--black) inset;
@@ -263,9 +263,9 @@ main {
 .educative_offer-info-content-title,
 .school_plan-info-content-title,
 .educative_plan_program-info-content-title,
+.schooling_info-content-title,
 .second-bach-info-content-title,
 .fp-info-content-title,
-.schooling-info-content-title,
 .info-students-content-title,
 .ampa-info-content-title {
     background-color: var(--white);
@@ -348,16 +348,6 @@ td {
     height: 187px;
 }
 
-#schooling-img-1 {
-    width: 700px;
-    height: 233px;
-}
-
-.schooling-info-videos-img {
-    width: 250px;
-    height: 185px;
-}
-
 .grey-bg-img {
     box-shadow: 0 0 8px 0px var(--black);
 }
@@ -421,11 +411,6 @@ td {
     #moodle-img {
         width: 134px;
         height: 70px;
-    }
-
-    #schooling-img-2 {
-        width: 500px;
-        height: 208px;
     }
 }
 
@@ -580,16 +565,6 @@ td {
     #requests-img {
         width: 300px;
         height: 86px;
-    }
-
-    #schooling-img-1 {
-        width: 300px;
-        height: 100px;
-    }
-
-    #schooling-img-2 {
-        width: 300px;
-        height: 125px;
     }
 
     .fs-blog {
