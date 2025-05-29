@@ -1,0 +1,31 @@
+<form method="post" action="{{ path('app_educative_plan_program_delete', {'id': educative_plan_program.id}) }}" id="delete-educative_plan_program-form">
+	<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ educative_plan_program.id) }}">
+	<button type="button" class="delete-button py-2 px-3 rounded text-white" data-bs-toggle="modal" data-bs-target="#confirmDeleteEducativePlanProgramModal">
+		<i class="fas fa-trash"></i>
+		Delete
+	</button>
+</form>
+
+<div class="modal fade" id="confirmDeleteEducativePlanProgramModal" tabindex="-1" aria-labelledby="confirmDeleteEducativePlanProgramModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="confirmDeleteEducativePlanProgramModalLabel">Confirmar borrado</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+			</div>
+			<div class="modal-body">
+				¿Seguro que quieres borrar esta noticia? Esta acción no se puede deshacer.
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+				<button type="button" class="btn btn-danger" id="confirm-delete-educative_plan_program-button">Sí, borrar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+ <script>
+document.getElementById('confirm-delete-educative_plan_program-button').addEventListener('click', function () {
+    document.getElementById('delete-educative_plan_program-form').submit();
+});
+</script>

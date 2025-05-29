@@ -8,6 +8,7 @@ parameters:
     images_directory_organization_chart: '%kernel.project_dir%/public/images/organization_chart'
     images_directory_educative_offer: '%kernel.project_dir%/public/images/educative_offer'
     images_directory_school_plan: '%kernel.project_dir%/public/images/school_plan'
+    images_directory_educative_plan_program: '%kernel.project_dir%/public/images/educative_plan_program'
 
 services:
     # default configuration for services in *this* file

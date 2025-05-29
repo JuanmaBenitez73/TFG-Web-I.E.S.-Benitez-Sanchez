@@ -22,7 +22,7 @@ class OrganizationChartController extends AbstractController
     {
         return $this->render('organization_chart/index.html.twig', [
             /* 'organization_charts' => $organizationChartRepository->findAll(), */ //Orden de creación
-            'organization_charts' => $organizationChartRepository->findBy([], ['id' => 'DESC']),//Más reciente primero
+            'organization_charts' => $organizationChartRepository->findBy([], ['id' => 'DESC']), //Más reciente primero
         ]);
     }
 
