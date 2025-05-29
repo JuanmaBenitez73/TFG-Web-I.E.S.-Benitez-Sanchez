@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ school_plan.title }}
+{% endblock %}
+
+{% block body %}
+	<main class="p-3 mt-3 mb-3 rounded overflow-hidden">
+		<div id="school_plan-container" class="p-1 rounded school_plan-info-content">
+			<div>
+				<h1 class="text-center title">{{ school_plan.title }}</h1>
+			</div>
+			<div class="p-4 text-justify">
+				<div>
+					<p style="word-wrap: break-word; overflow-wrap: break-word; word-break: break-word;">{{ school_plan.description }}</p>
+					{% if school_plan.image %}
+						<div class="d-flex justify-content-center">
+							<div style="max-width: 400px; max-height: 400px; overflow: hidden; box-shadow: 0 0 25px #2A635A;">
+								<img src="{{ asset('images/school_plan/' ~ school_plan.image) }}" alt="{{ school_plan.image }}" style="width: 100%; height: 100%;object-fit: cover;">
+							</div>
+						</div>
+					{% endif %}
+					<hr class="text-secondary">
+					<div class="d-flex align-items-center gap-2">
+						{% if app.session.get('user_id') is not null %}
+							<a href="{{ path('app_school_plan_edit', {'id': school_plan.id}) }}" class="edit-button py-2 px-3 rounded text-black">
+								<i class="fas fa-edit"></i>
+								Editar
+							</a>
+						{% endif %}
+						<a href="/school_plan" class="back-list-button py-2 px-3 rounded text-white">
+							<i class="fas fa-arrow-left"></i>
+							Volver
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}

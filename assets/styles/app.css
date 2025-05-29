@@ -203,8 +203,8 @@ main {
 #organization_chart-container,
 #location-container,
 #educative_offer-container,
+#school_plan-container,
 #contact-container,
-#school-plan-container,
 #educative-proyect-container,
 #second-bach-info-container,
 #fp-info-container,
@@ -242,13 +242,10 @@ main {
     text-align: justify;
 }
 
-.school-plan-links {
-    width: 700px;
-}
-
 .home-info-content,
 .organization_chart-info-content,
 .educative_offer-info-content,
+.school_plan-info-content,
 .second-bach-info-content,
 .fp-info-content,
 .schooling-info-content,
@@ -262,6 +259,7 @@ main {
 .home-info-content-title,
 .organization_chart-info-content-title,
 .educative_offer-info-content-title,
+.school_plan-info-content-title,
 .second-bach-info-content-title,
 .fp-info-content-title,
 .schooling-info-content-title,
@@ -435,7 +433,6 @@ td {
     }
 
     .fs-xs,
-    .school-plan-links,
     .ampa-table {
         font-size: x-small;
     }
@@ -513,11 +510,6 @@ td {
     .carousel-content {
         width: 300px;
         height: 225px;
-    }
-
-    #school-plan-image {
-        width: 300px;
-        height: 223px;
     }
 
     #table-container {

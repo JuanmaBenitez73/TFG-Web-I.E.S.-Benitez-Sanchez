@@ -1,16 +1,16 @@
 <form method="post" action="{{ path('app_educative_offer_delete', {'id': educative_offer.id}) }}" id="delete-educative_offer-form">
 	<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ educative_offer.id) }}">
-	<button type="button" class="delete-button py-2 px-3 rounded text-white" data-bs-toggle="modal" data-bs-target="#confirmDeleteOrganizationChartModal">
+	<button type="button" class="delete-button py-2 px-3 rounded text-white" data-bs-toggle="modal" data-bs-target="#confirmDeleteEducativeOfferModal">
 		<i class="fas fa-trash"></i>
 		Delete
 	</button>
 </form>
 
-<div class="modal fade" id="confirmDeleteOrganizationChartModal" tabindex="-1" aria-labelledby="confirmDeleteOrganizationChartModalLabel" aria-hidden="true">
+<div class="modal fade" id="confirmDeleteEducativeOfferModal" tabindex="-1" aria-labelledby="confirmDeleteEducativeOfferModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="confirmDeleteOrganizationChartModalLabel">Confirmar borrado</h5>
+				<h5 class="modal-title" id="confirmDeleteEducativeOfferModalLabel">Confirmar borrado</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
 			</div>
 			<div class="modal-body">

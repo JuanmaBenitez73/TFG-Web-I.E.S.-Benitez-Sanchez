@@ -5,33 +5,55 @@
 
 {% block body %}
 	<main class="p-3 mt-3 mb-3 rounded overflow-hidden">
-		<div id="school-plan-container" class="p-1 rounded">
+		<div id="school_plan-container" class="p-1 rounded">
 			<div>
-				<h1 class="text-center title">I.E.S. Salduba - Plan de centro</h1>
+				<h1 class="text-center title">Plan de centro</h1>
 			</div>
-			<div class="d-flex flex-column align-items-center">
-				<div id="school-plan-content" class="p-2 rounded">
-					<img id="school-plan-image" src="images/school_plan.jpg" alt="Plan de centro"/>
-				</div>
-			</div>
-			<div class="p-2 rounded d-flex justify-content-center">
-				<div class="d-flex justify-content-between school-plan-links text-dark text-decoration-none fw-bold">
-					<div>
-						<i class="fa-solid fa-circle-arrow-up"></i>
-						<a class="text-dark text-decoration-none fw-bold link" href="{{ path('app_school_plan_educative_proyect') }}">Proyecto Educativo</a>
-						<i class="fa-solid fa-circle-arrow-up"></i>
+			<div class="p-4 text-justify">
+				{% for school_plan in school_plans %}
+					<div class="text-justify">
+						<div class="school_plan-info-content rounded mb-2">
+							<h1 class="text-center school_plan-info-content-title rounded">{{ school_plan.title }}</h1>
+							<p style="word-wrap: break-word; overflow-wrap:break-word; word-break: break-word">
+								<b>{{ school_plan.description }}</b>
+							</p>
+							{% if school_plan.image %}
+								<div class="d-flex justify-content-center">
+									<div style="max-width: 400px; max-height: 400px; overflow: hidden; box-shadow: 0 0 25px #2A635A;">
+										<img src="{{ asset('images/school_plan/' ~ school_plan.image) }}" alt="{{ school_plan.image }}" style="width: 100%; height: 100%; object-fit: cover;">
+									</div>
+								</div>
+							{% endif %}
+						</div>
+						<div class="d-flex align-items-center gap-2">
+							<a href="{{ path('app_school_plan_show', {'id': school_plan.id}) }}" class="details-button py-2 px-3 rounded text-white">
+								<i class="fas fa-eye"></i>
+								Ver detalles
+							</a>
+							{% if app.session.get('user_id') is not null %}
+								<a href="{{ path('app_school_plan_edit', {'id': school_plan.id}) }}" class="edit-button py-2 px-3 rounded text-black">
+									<i class="fas fa-edit"></i>
+									Editar
+								</a>
+							{% endif %}
+						</div>
+						<hr class="text-secondary">
 					</div>
-					<div>
-						<i class="fa-solid fa-circle-arrow-up"></i>
-						<a class="text-dark text-decoration-none fw-bold link" href="{{ path('app_school_plan_rof') }}">R.O.F.</a>
-						<i class="fa-solid fa-circle-arrow-up"></i>
+				{% else %}
+					<div class="text-center">
+						<p class="fw-bold fs-3">"No existe información 😔"</p>
 					</div>
-					<div>
-						<i class="fa-solid fa-circle-arrow-up"></i>
-						<a class="text-dark text-decoration-none fw-bold link" href="{{ path('app_school_plan_project_management') }}">Proyecto Gestión</a>
-						<i class="fa-solid fa-circle-arrow-up"></i>
+					<hr class="text-secondary">
+				{% endfor %}
+				{% if app.session.get('user_id') is not null %}
+					<div class="d-flex justify-content-center">
+						<a href="{{path('app_school_plan_new')}}" class="create-button py-2 px-3 rounded text-black">
+							<i class="fas fa-plus"></i>
+							Añadir noticia / información
+						</a>
 					</div>
-				</div>
+					<hr class="text-secondary">
+				{% endif %}
 			</div>
 		</div>
 	</main>
