@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editar
+	{{ fp.title }}
+{% endblock %}
+
+{% block body %}
+	<main class="p-3 mt-3 mb-3 rounded overflow-hidden">
+		<div id="fp-container" class="p-1 rounded">
+			<div>
+				<h1 class="text-center title">Editar:<br>
+					{{ fp.title }}</h1>
+			</div>
+			<div class="p-4 text-justify">
+				{{ include('fp/_form.html.twig') }}
+				{% if fp.image %}
+					<div class="d-flex justify-content-center">
+						<div style="max-width: 400px; max-height: 400px; overflow: hidden; box-shadow: 0 0 25px #2A635A;">
+							<img src="{{ asset('images/fp/' ~ fp.image) }}" alt="{{ fp.image }}" style="width: 100%; height: 100%;object-fit: cover;">
+						</div>
+					</div>
+					{% if app.session.get('user_id') is not null %}
+						{% if app.session.get('is_admin') %}
+							<form method="post" action="{{ path('fp_delete_image', {'id': fp.id}) }}" id="delete-image-form" class="mt-2">
+								<input type="hidden" name="_token" value="{{ csrf_token('delete_image' ~ fp.id) }}">
+								<div class="d-flex justify-content-end">
+									<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">
+										<i class="fas fa-times-circle"></i>
+										<i class="fas fa-image"></i>
+										Borrar imagen
+									</button>
+								</div>
+							</form>
+						{% endif %}
+					{% endif %}
+				{% endif %}
+				<hr class="text-secondary">
+				<div class="d-flex align-items-center gap-2">
+					<a href="/fp" class="back-list-button py-2 px-3 rounded text-white">
+						<i class="fas fa-arrow-left"></i>
+						Volver
+					</a>
+					{% if app.session.get('user_id') is not null %}
+						{% if app.session.get('is_admin') %}
+							{{ include('fp/_delete_form.html.twig') }}
+						{% endif %}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</main>
+	 <script>
+				document.getElementById('confirm-delete-button').addEventListener('click', function () {
+				    document.getElementById('delete-image-form').submit();
+				});
+				</script>
+{% endblock %}

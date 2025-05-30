@@ -1,6 +1,10 @@
 :root {
     --black: #2A635A;
     --white: #FFDDD2;
+    /* --black: #2e2d2d;
+    --white: #c6c6c6; */
+    /* --black: #ff0000;
+    --white: #fff200; */
 }
 
 body {
@@ -209,7 +213,7 @@ main {
 #schooling_info-container,
 #second_bach-container,
 #educative-proyect-container,
-#fp-info-container,
+#fp-container,
 #library-container,
 #info-students-container,
 #library-blogs-container,
@@ -250,7 +254,7 @@ main {
 .educative_plan_program-info-content,
 .schooling_info-content,
 .second_bach-content,
-.fp-info-content,
+.fp-content,
 .info-students-container,
 .ampa-info-content {
     box-shadow: 0 0 10px 0px var(--black) inset;
@@ -265,7 +269,7 @@ main {
 .educative_plan_program-info-content-title,
 .schooling_info-content-title,
 .second_bach-content-title,
-.fp-info-content-title,
+.fp-content-title,
 .info-students-content-title,
 .ampa-info-content-title {
     background-color: var(--white);
@@ -336,11 +340,6 @@ td {
 #plans_programs_img {
     width: 400px;
     height: 308px;
-}
-
-#escolarizacion-fp-img {
-    width: 700px;
-    height: 473px;
 }
 
 #requests-img {
@@ -555,11 +554,6 @@ td {
     #anexo-img {
         width: 300px;
         height: 181px;
-    }
-
-    #escolarizacion-fp-img {
-        width: 300px;
-        height: 202px;
     }
 
     #requests-img {
