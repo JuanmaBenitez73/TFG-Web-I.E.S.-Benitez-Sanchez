@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nueva noticia
+{% endblock %}
+
+{% block body %}
+	<main class="p-3 mt-3 mb-3 rounded overflow-hidden">
+		<div id="second_bach-container" class="p-1 rounded">
+			<div>
+				<h1 class="text-center title">Crear nueva noticia (2º Bachillerato)</h1>
+			</div>
+			<div class="p-4 text-justify">
+				{{ include('second_bach/_form.html.twig') }}
+				<hr class="text-secondary">
+				<div class="d-flex align-items-center gap-2">
+					<a href="/second_bach" class="back-list-button py-2 px-3 rounded text-white">
+						<i class="fas fa-arrow-left"></i>
+						Volver
+					</a>
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}

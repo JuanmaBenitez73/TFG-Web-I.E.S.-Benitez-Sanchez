@@ -207,8 +207,8 @@ main {
 #educative_plan_program-container,
 #contact-container,
 #schooling_info-container,
+#second_bach-container,
 #educative-proyect-container,
-#second-bach-info-container,
 #fp-info-container,
 #library-container,
 #info-students-container,
@@ -249,7 +249,7 @@ main {
 .school_plan-info-content,
 .educative_plan_program-info-content,
 .schooling_info-content,
-.second-bach-info-content,
+.second_bach-content,
 .fp-info-content,
 .info-students-container,
 .ampa-info-content {
@@ -264,7 +264,7 @@ main {
 .school_plan-info-content-title,
 .educative_plan_program-info-content-title,
 .schooling_info-content-title,
-.second-bach-info-content-title,
+.second_bach-content-title,
 .fp-info-content-title,
 .info-students-content-title,
 .ampa-info-content-title {
