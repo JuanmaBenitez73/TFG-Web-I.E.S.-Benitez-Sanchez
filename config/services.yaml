@@ -12,6 +12,7 @@ parameters:
     images_directory_schooling_info: '%kernel.project_dir%/public/images/schooling_info'
     images_directory_second_bach: '%kernel.project_dir%/public/images/second_bach'
     images_directory_fp: '%kernel.project_dir%/public/images/fp'
+    images_directory_library: '%kernel.project_dir%/public/images/library'
 
 services:
     # default configuration for services in *this* file
