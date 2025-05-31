@@ -213,10 +213,10 @@ main {
 #educative-proyect-container,
 #fp-container,
 #library-container,
-#dace-container,
-#info-students-container,
 #library-blogs-container,
+#dace-container,
 #contact-dace-container,
+#students_pending_subjects-container,
 #contact-ampa-container,
 #ampa-info-container {
     background-color: var(--white);
@@ -255,7 +255,7 @@ main {
 .fp-content,
 .library-content,
 .dace-content,
-.info-students-container,
+.students_pending_subjects-content,
 .ampa-info-content {
     box-shadow: 0 0 10px 0px var(--black) inset;
     padding: 1rem;
@@ -272,7 +272,7 @@ main {
 .fp-content-title,
 .library-content-title,
 .dace-content-title,
-.info-students-content-title,
+.students_pending_subjects-content-title,
 .ampa-info-content-title {
     background-color: var(--white);
     border: 2px solid var(--black);

@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ students_pending_subjects.title }}
+{% endblock %}
+
+{% block body %}
+	<main class="p-3 mt-3 mb-3 rounded overflow-hidden">
+		<div id="students_pending_subjects-container" class="p-1 rounded students_pending_subjects-info-content">
+			<div>
+				<h1 class="text-center title">{{ students_pending_subjects.title }}</h1>
+			</div>
+			<div class="p-4 text-justify">
+				<div>
+					<p style="word-wrap: break-word; overflow-wrap: break-word; word-break: break-word;">{{ students_pending_subjects.description }}</p>
+					{% if students_pending_subjects.image %}
+						<div class="d-flex justify-content-center">
+							<div style="max-width: 400px; max-height: 400px; overflow: hidden; box-shadow: 0 0 25px #2A635A;">
+								<img src="{{ asset('images/students_pending_subjects/' ~ students_pending_subjects.image) }}" alt="{{ students_pending_subjects.image }}" style="width: 100%; height: 100%;object-fit: cover;">
+							</div>
+						</div>
+					{% endif %}
+					<hr class="text-secondary">
+					<div class="d-flex align-items-center gap-2">
+						{% if app.session.get('user_id') is not null %}
+							<a href="{{ path('app_students_pending_subjects_edit', {'id': students_pending_subjects.id}) }}" class="edit-button py-2 px-3 rounded text-black">
+								<i class="fas fa-edit"></i>
+								Editar
+							</a>
+						{% endif %}
+						<a href="/students_pending_subjects" class="back-list-button py-2 px-3 rounded text-white">
+							<i class="fas fa-arrow-left"></i>
+							Volver
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}
