@@ -1,10 +1,8 @@
 :root {
     --black: #2A635A;
     --white: #FFDDD2;
-    /* --black: #2e2d2d;
-    --white: #c6c6c6; */
-    /* --black: #ff0000; 
-    --white: #fff200; */ 
+    /* --black: #2e2d2d; 
+    --white: #c6c6c6; */ /* Escala de grises */
 }
 
 body {
@@ -215,11 +213,11 @@ main {
 #educative-proyect-container,
 #fp-container,
 #library-container,
+#dace-container,
 #info-students-container,
 #library-blogs-container,
 #contact-dace-container,
 #contact-ampa-container,
-#dace-info-container,
 #ampa-info-container {
     background-color: var(--white);
 }
@@ -256,6 +254,7 @@ main {
 .second_bach-content,
 .fp-content,
 .library-content,
+.dace-content,
 .info-students-container,
 .ampa-info-content {
     box-shadow: 0 0 10px 0px var(--black) inset;
@@ -272,6 +271,7 @@ main {
 .second_bach-content-title,
 .fp-content-title,
 .library-content-title,
+.dace-content-title,
 .info-students-content-title,
 .ampa-info-content-title {
     background-color: var(--white);
