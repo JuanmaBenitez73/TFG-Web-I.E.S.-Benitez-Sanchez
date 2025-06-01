@@ -228,7 +228,8 @@ main {
 #contact-dace-container,
 #students_pending_subjects-container,
 #contact-ampa-container,
-#ampa-container {
+#ampa-container,
+#error-container {
     background-color: var(--white);
 }
 
