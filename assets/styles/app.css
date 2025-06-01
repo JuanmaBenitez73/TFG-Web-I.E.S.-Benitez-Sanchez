@@ -2,7 +2,8 @@
     --black: #2A635A;
     --white: #FFDDD2;
     /* --black: #2e2d2d; 
-    --white: #c6c6c6; */ /* Escala de grises */
+    --white: #c6c6c6; */
+    /* Escala de grises */
 }
 
 body {
@@ -28,6 +29,15 @@ main {
     width: 100px;
     height: 100px;
     box-shadow: 0 0 10px 0px var(--white);
+}
+
+#admin_users {
+    text-decoration: none;
+}
+
+#admin_users:hover {
+    text-decoration: underline;
+    color: #0DCAF0 !important;
 }
 
 .form-group {
@@ -218,7 +228,7 @@ main {
 #contact-dace-container,
 #students_pending_subjects-container,
 #contact-ampa-container,
-#ampa-info-container {
+#ampa-container {
     background-color: var(--white);
 }
 
@@ -421,8 +431,7 @@ td {
         gap: 1.5rem;
     }
 
-    .fs-xs,
-    .ampa-table {
+    .fs-xs {
         font-size: x-small;
     }
 
@@ -565,10 +574,5 @@ td {
 
     .fs-blog {
         font-size: small;
-    }
-
-    #ampa-img {
-        width: 300px;
-        height: 86px;
     }
 }

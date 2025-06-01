@@ -15,6 +15,7 @@ parameters:
     images_directory_library: '%kernel.project_dir%/public/images/library'
     images_directory_dace: '%kernel.project_dir%/public/images/dace'
     images_directory_students_pending_subjects: '%kernel.project_dir%/public/images/students_pending_subjects'
+    images_directory_ampa: '%kernel.project_dir%/public/images/ampa'
 
 services:
     # default configuration for services in *this* file
