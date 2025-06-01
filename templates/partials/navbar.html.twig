@@ -128,7 +128,7 @@
 
 					{% if app.session.get('is_admin') %}
 						<p class="text-light small fw-bold">Eres administrador<br>
-							<a href="{# https://www.codingame.com/home #}" id="admin_users" class="btn btn-link text-light fw-bold">
+							<a href="{{ path('app_users_index') }}" id="admin_users" class="btn btn-link text-light fw-bold">
 								<i class="fas fa-users-cog"></i>Gestionar usuarios
 							</a>
 						</p>

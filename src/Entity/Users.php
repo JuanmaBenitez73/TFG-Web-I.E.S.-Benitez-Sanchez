@@ -72,6 +72,9 @@ class Users implements UserInterface, PasswordAuthenticatedUserInterface
     {
         $roles = $this->roles;
 
+        $roles = array_map('trim', $roles);
+        $roles = array_map('strtoupper', $roles);
+
         $roles[] = 'ROLE_USER';
 
         if ($this->admin) {

@@ -1,0 +1,23 @@
+{{ form_start(form) }}
+
+<div class="form-group">
+	{{ form_label(form.username, null, {'label_attr': {'class': 'form-label'}}) }}
+	{{ form_widget(form.username, {'attr': {'class': 'form-control'}}) }}
+</div>
+
+<div class="form-group">
+	{{ form_label(form.password, null, {'label_attr': {'class': 'form-label'}}) }}
+	{{ form_widget(form.password, {'attr': {'class': 'form-control'}}) }}
+</div>
+
+<div class="form-check mb-3">
+    {{ form_label(form.admin, null, {'label_attr': {'class': 'form-check-label'}}) }}
+    {{ form_widget(form.admin, {'attr': {'class': 'form-check-input'}}) }}
+</div>
+
+{{ form_widget(form) }}
+<button class="update-button py-2 px-3 rounded text-black">
+	<i class="fas fa-save"></i>
+	{{ button_label|default('Guardar') }}
+</button>
+{{ form_end(form) }}

@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editar usuario{% endblock %}
+
+{% block body %}
+<main class="p-3 mt-3 mb-3 rounded overflow-hidden">
+    <div id="users-container" class="p-4 rounded">
+        <div>
+            <h1 class="text-center title">
+                <i class="fas fa-user-edit m-3"></i>Editar usuario
+            </h1>
+        </div>
+
+        {{ include('users/_form.html.twig', {'button_label': 'Actualizar'}) }}
+
+        <div class="d-flex justify-content-center mt-4 gap-3">
+            <a href="{{ path('app_users_index') }}" class="btn btn-primary">
+                <i class="fas fa-arrow-left"></i> Volver a la lista
+            </a>
+
+            {{ include('users/_delete_form.html.twig') }}
+        </div>
+    </div>
+</main>
+{% endblock %}

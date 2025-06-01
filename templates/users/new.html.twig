@@ -1,0 +1,38 @@
+{# {% extends 'base.html.twig' %}
+
+{% block title %}New Users{% endblock %}
+
+{% block body %}
+    <h1>Create new Users</h1>
+
+    {{ include('users/_form.html.twig') }}
+
+    <a href="{{ path('app_users_index') }}">back to list</a>
+{% endblock %}
+ #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Crear nuevo usuario
+{% endblock %}
+
+{% block body %}
+	<main class="p-3 mt-3 mb-3 rounded overflow-hidden">
+		<div id="users-container" class="p-4 rounded">
+			<div>
+				<h1 class="text-center title">
+					<i class="fas fa-user-plus m-3"></i>Crear nuevo usuario
+				</h1>
+			</div>
+
+			{{ include('users/_form.html.twig') }}
+
+			<div class="d-flex justify-content-center mt-4">
+				<a href="{{ path('app_users_index') }}" class="btn btn-primary">
+					<i class="fas fa-arrow-left"></i>
+					Volver a la lista
+				</a>
+			</div>
+		</div>
+	</main>
+{% endblock %}

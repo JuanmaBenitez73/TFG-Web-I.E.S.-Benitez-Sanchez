@@ -53,7 +53,6 @@ class LoginController extends AbstractController
     public function logout(Request $request, SessionInterface $session): Response
     {
         $session->clear();
-        $referer = $request->headers->get('referer');
-        return $this->redirect($referer ?? '/');
+        return $this->redirect('/');
     }
 }
